@@ -1,0 +1,29 @@
+<resources>
+
+    <!-- Base application theme. -->
+
+    <style name="AppTheme" parent="AppBasedTheme">
+        <item name="android:colorBackground">#E3F2FD</item>
+        <item name="android:editTextColor">#2196F3</item>
+
+        <item name="android:colorPrimary">#42A5F5</item>
+
+        <item name="android:textColorSecondary">#ffb62a23</item>
+
+        <item name="android:textColorTertiary">#0D47A1</item>
+
+        <item name="android:textColorPrimaryInverse">#ffb62a23</item>
+
+        <item name="android:textColorSecondaryInverse">#ffb62a23</item>
+
+        <item name="android:textColorTertiaryInverse">#1976D2</item>
+
+
+    </style>
+
+
+
+
+
+
+</resources>

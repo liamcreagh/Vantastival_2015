@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mycompany.vantastival" >
+
+    <uses-sdk android:minSdkVersion="11" />
+
+    <android:uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <android:uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MapMain"
+            android:label="@string/title_activity_map_main"
+             >
+        </activity>
+        <activity
+            android:name=".BandMain"
+            android:label="@string/title_activity_bands_main"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".MusicMain"
+            android:label="@string/title_activity_music_main"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".NewsMain"
+            android:label="@string/title_activity_news_main"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".InfoMain"
+            android:label="@string/title_activity_info_list"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".StagesMain"
+            android:label="@string/title_activity_stages_main"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".StagesMainstage"
+            android:label="@string/title_activity_stages_mainstage"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".StagesVanhalla"
+            android:label="@string/title_activity_stages_vanhalla"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".StagesMusicmaker"
+            android:label="@string/title_activity_stages_musicmaker"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".StagesUnplugged"
+            android:label="@string/title_activity_stages_unplugged"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".StagesMelomania"
+            android:label="@string/title_activity_stages_melomania"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".InfoFestival"
+            android:label="@string/title_activity_info_festival"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".InfoCamping"
+            android:label="@string/title_activity_info_camping"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".InfoCheckout"
+            android:label="@string/title_activity_info_checkout"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".InfoTickets"
+            android:label="@string/title_activity_info_tickets"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".InfoVenue"
+            android:label="@string/title_activity_info_venue"
+            android:screenOrientation="portrait">
+        </activity>
+    </application>
+
+</manifest>

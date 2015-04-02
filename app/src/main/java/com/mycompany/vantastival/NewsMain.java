@@ -1,15 +1,17 @@
 package com.mycompany.vantastival;
 
+import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import com.mycompany.vantastival.stab.NewsFragmentPagerAdapter;
 import com.mycompany.vantastival.stab.SlidingTabLayout;
 
 
-public class NewsMain extends FragmentActivity {
+public class NewsMain extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,8 +42,10 @@ public class NewsMain extends FragmentActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_back) {
+
+            Intent contact = new Intent(this, MainActivity.class);
+            startActivity(contact);
             return true;
         }
 

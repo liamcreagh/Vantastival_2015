@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Vantastival</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_stages_main">Stages and Times</string>
+    <string name="title_activity_map_main">Map</string>
+    <string name="title_activity_bands_main">Bands</string>
+    <string name="title_activity_info_main">Info</string>
+    <string name="title_activity_music_main">Music</string>
+    <string name="title_activity_news_main">News &amp; Media</string>
+    <string name="stop_button">Stop</string>
+    <string name="title_activity_test">Test</string>
+    <string name="news_news">News</string>
+    <string name="news_facebook">Facebook</string>
+    <string name="news_twitter">Twitter</string>
+    <string name="title_activity_info_list">Info</string>
+    <string name="title_activity_stage_main">StageMain</string>
+    <string name="title_activity_stages_mainstage">Mainstage</string>
+    <string name="title_activity_stages_vanhalla">Vanhalla</string>
+    <string name="title_activity_stages_musicmaker">Musicmaker</string>
+    <string name="title_activity_stages_unplugged">Unplugged</string>
+    <string name="title_activity_stages_melomania">Melomania</string>
+    <string name="title_activity_info_festival">Festival Info</string>
+    <string name="title_activity_info_camping">Camping Info</string>
+    <string name="title_activity_info_checkout">Checkout Info</string>
+    <string name="title_activity_info_tickets">Tickets Info</string>
+    <string name="title_activity_info_venue">Venue Info</string>
+    <string name="back">Back</string>
+
+</resources>
