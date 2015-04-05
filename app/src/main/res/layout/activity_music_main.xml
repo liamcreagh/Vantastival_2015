@@ -5,44 +5,55 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.mycompany.vantastival.MusicMain"
-    android:background="@drawable/mainbackground"
     android:orientation="vertical">
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Song Name"
-        android:id="@+id/textViewSong" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Artist"
-        android:id="@+id/textViewArtist" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="pauseMusic"
-        android:text="Pause"
-        android:id="@+id/buttonPause"
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:id="@+id/listViewMusicPlayer"
         />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar"
+        android:onClick=""
+        android:layout_weight="1" />
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Play"
-        android:onClick="playMusic"
-        android:id="@+id/buttonPlay"
- />
+        android:text="Back"
+        android:id="@+id/buttonBack"
+        android:onClick="onBack"/>
 
-    <ProgressBar
-        style="?android:attr/progressBarStyleLarge"
+
+
+        <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/progressBar" />
+        android:text="Play / Pause"
+        android:id="@+id/buttonPlayPause"
+        android:layout_gravity="center_horizontal"
+        android:onClick="onPlayPause"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forward"
+        android:id="@+id/buttonForward"
+        android:layout_gravity="right"
+        android:onClick="onForward"/>
+
+    </LinearLayout>
 
 
 </LinearLayout>
