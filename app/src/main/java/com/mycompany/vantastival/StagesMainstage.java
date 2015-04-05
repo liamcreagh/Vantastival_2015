@@ -1,14 +1,19 @@
 package com.mycompany.vantastival;
 
-import android.app.ActionBar;
-import android.content.Intent;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.view.ViewPager;
 
+import android.content.ContentValues;
+import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
+import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
+
+import com.mycompany.vantastival.db.DBAdapter;
+import com.mycompany.vantastival.db.Message;
 import com.mycompany.vantastival.stab.MainstageFragmentPagerAdapter;
 import com.mycompany.vantastival.stab.SlidingTabLayout;
 
@@ -16,6 +21,8 @@ import com.mycompany.vantastival.stab.SlidingTabLayout;
 public class StagesMainstage extends ActionBarActivity {
 
 
+    EditText bandNames, bandDescriptions, bandStages;
+    DBAdapter dbHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +36,52 @@ public class StagesMainstage extends ActionBarActivity {
         SlidingTabLayout slidingTabLayout = (SlidingTabLayout) findViewById(R.id.mainstageTabs);
         slidingTabLayout.setViewPager(viewPager);
 
+
+        bandNames = (EditText) findViewById(R.id.bandName);
+        bandDescriptions = (EditText) findViewById(R.id.bandDescription);
+        bandStages = (EditText) findViewById(R.id.bandStage);
+
+        dbHelper = new DBAdapter(this);
+
+
     }
+
+
+
+
+
+
+
+    public void addBand(View view){
+
+
+
+        String band = bandNames.getText().toString();
+
+        String description = bandDescriptions.getText().toString();
+        String stage = bandDescriptions.getText().toString();
+
+
+
+
+        long id = dbHelper.insertData(band, description);
+
+        //       and Degs", "main", "", 6.0
+
+        if(id < 0){
+            Message.message(this, "Somethings Wrong");
+        } else {
+            Message.message(this, "Worked");
+        }
+
+    }
+
+
+
+
+
+
+
 
 
 

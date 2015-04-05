@@ -5,6 +5,30 @@
 
     android:orientation="vertical">
 
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bandName" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bandDescription" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bandStage" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Band"
+        android:id="@+id/button"
+        android:onClick="addBand"/>
+
+
+
     <!-- The sliding tab -->
     <com.mycompany.vantastival.stab.SlidingTabLayout
         android:id="@+id/mainstageTabs"
