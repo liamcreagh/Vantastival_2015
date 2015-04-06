@@ -4,10 +4,22 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.mycompany.vantastival.Test$PlaceholderFragment">
+    tools:context="com.mycompany.vantastival.Test$PlaceholderFragment"
+    android:orientation="vertical">
 
     <TextView android:id="@+id/section_label" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" android:text="Car Park"/>
+        android:layout_height="wrap_content" android:text="Car Park"
+        android:paddingLeft="10dp"/>
 
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+        <TextView
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The Car Park is very close to the festival site and will be well signposted (5 minute walk). Absolutely no camping will be permitted in the Car Park. No sound systems will be permitted in the car park and anyone attempting to operate a sound system here will be asked to leave the site."
+            android:id="@+id/textView" />
+    </ScrollView>
 
 </LinearLayout>

@@ -8,9 +8,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+
 import com.mycompany.vantastival.R;
 
-public class InfoVenueMap extends Fragment {
+public class InfoVenueMap extends Fragment  {
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -18,3 +19,9 @@ public class InfoVenueMap extends Fragment {
         return view;
     }
 }
+
+
+
+
+
+

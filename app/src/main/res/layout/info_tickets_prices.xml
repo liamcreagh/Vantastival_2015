@@ -4,10 +4,44 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.mycompany.vantastival.Test$PlaceholderFragment">
+    tools:context="com.mycompany.vantastival.Test$PlaceholderFragment"
+    android:orientation="vertical">
 
     <TextView android:id="@+id/section_label" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" android:text="Prices"/>
+        android:layout_height="wrap_content" android:text="Prices"
+        android:paddingLeft="10dp"/>
 
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+        <TextView
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Children’s Tickets: No children’s tickets can be purchased in advanced. They must be paid for at the box office on entry to the festival.
+
+Weekend camping: €95
+\nFull festival access from 2pm on Friday 1st May until Monday morning, 4th May. Includes camping and access to all festival areas. Price is per person (over 18). There is no charge for bringing a campervan.
+\n\n
+Saturday tickets: €45
+\nFull festival access from 10.30am on Saturday 2nd May until the headline act has finished on Saturday night. NO CAMPING. No access to after hours area.
+\n\n
+Sunday tickets: €45
+\nFull festival access from 10.30am on Sunday 3rd May until the headline act has finished on Sunday night. NO CAMPING. No access to after hours area.
+\n\n
+Sunday camping: €55
+Full festival access with camping from 10.30am on Sunday 3rd May until Monday morning 4th May.
+\n\n
+Minor tickets, 14 – 17 years old : €40 weekend/€20 day
+\n\n
+All minors must be accompanied by a parent/guardian buying an adult ticket. Minor tickets cannot be purchased in advance and must be paid for at the box office on the day by the adult ticket holder.
+\nChildren’s tickets, 3 – 13 years old: €5
+
+Children’s tickets cannot be purchased in advance and must be paid for at the box office on the day by the adult ticket holder.
+\nChildren, 0 – 2 years old : Free entry
+\n\n
+No tickets are required for babies and children under 3."
+            android:id="@+id/textView" />
+    </ScrollView>
 
 </LinearLayout>

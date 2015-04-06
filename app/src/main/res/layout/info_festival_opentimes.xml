@@ -4,10 +4,22 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.mycompany.vantastival.Test$PlaceholderFragment">
+    tools:context="com.mycompany.vantastival.Test$PlaceholderFragment"
+    android:orientation="vertical">
 
     <TextView android:id="@+id/section_label" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" android:text="OpenTimes"/>
+        android:layout_height="wrap_content" android:text="OpenTimes"
+        android:paddingLeft="10dp"/>
 
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+        <TextView
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The festival site will be open from 2pm on Friday 1st May 2015. The box office will be open from 2pm to 11.30pm.\n\nOn Saturday and Sunday the box office will be open from 11am to 11pm.\n\nWE DO NOT HAVE CREDIT CARD FACILITIES ON SITE AND CAN ACCEPT CASH PAYMENTS ONLY FOR TICKETS PURCHASED ON THE DAY."
+            android:id="@+id/textView" />
+    </ScrollView>
 
 </LinearLayout>

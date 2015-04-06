@@ -4,10 +4,24 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.mycompany.vantastival.Test$PlaceholderFragment">
+    tools:context="com.mycompany.vantastival.Test$PlaceholderFragment"
+    android:orientation="vertical">
 
     <TextView android:id="@+id/section_label" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" android:text="About"/>
+        android:layout_height="wrap_content" android:text="About"
+        android:paddingLeft="10dp"/>
 
-
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+        <TextView
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The unique eco-architecture of Vantastival’s stages has been inspired by the ancient 200 acre ‘Tippings Wood’, which forms part of the exceptional landscape of Bellurgan Park. The custom designed ‘Van Halla’ stage was built from materials sourced on site and dug into the hillside in the estate. Walking into ‘VanHalla’ is like stepping into an ancient Viking world, while The Grotto Stage forms a natural amphitheatre in the landscape.
+\n\n
+Vantastival is held at Bellurgan Park, an estate of extraordinary natural beauty under the lofty shade of the Cooley Mountains.  Bellurgan Park is a truly unique estate that has been in the Tipping Family since the early 18th century. Situated almost exactly midway between Dublin and Belfast, to the rear of the house lies the old Dundalk – Carlingford road.  Bellurgan Park is an organic farm and contains over 200 acres of deciduous woodlands. Bellurgan Park is situated just 3 miles off the M1 motorway, exit 18 North of Dundalk."
+            android:id="@+id/textView" />
+    </ScrollView>
+    
 </LinearLayout>

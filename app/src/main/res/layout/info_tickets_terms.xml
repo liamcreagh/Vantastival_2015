@@ -4,10 +4,37 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.mycompany.vantastival.Test$PlaceholderFragment">
+    tools:context="com.mycompany.vantastival.Test$PlaceholderFragment"
+    android:orientation="vertical">
 
     <TextView android:id="@+id/section_label" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" android:text="Terms and Conditions"/>
+        android:layout_height="wrap_content" android:text="Terms and Conditions"
+        android:paddingLeft="10dp"/>
 
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+        <TextView
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1. The purchase of a Ticket to Vantastival and/or the use of a Ticket to Vantastival to gain entry to the Event constitutes the unconditional acceptance of the following terms and conditions. This Ticket is a revocable licence to attend the Event for which it was issued and may be revoked at any time for any reason without compensation.
+\n\n2. The Ticket cannot be replaced if lost, stolen or destroyed. The Ticket is non-transferable and the resale of the Ticket at a price greater than face value is prohibited. The Ticket is not redeemable for cash. All ticket sales are final, there will be no ticket refunds and/or exchanges.
+\n\n3. Vantastival Ltd. reserve the right to delay, postpone, and/or change the venue, artist(s), time and/or date of the Event for which the Ticket was issued without prior notice or compensation. Vantastival Ltd. reserves the right to make any change whatsoever to the act programme owing to any unforeseen or unavoidable cause. No money will be refunded or tickets exchanged unless the Event is cancelled.
+\n\n4. The holder of a Ticket to Vantastival assumes all risk of injury and all responsibility for property loss, destruction or theft and releases Vantastival Ltd., performers, sponsors, venue owner, ticket outlets and their employees from any liability whatsoever.
+\n\n5. The Event may be recorded live for use in the forum of sound recordings, television videotapes and other means of audio and audiovisual reproductions. The Ticket holder consents to participate in the said recordings and grants all necessary consents for Performers Protection Act.
+\n\n6. A number of photographers will be present at the Event taking photographs on the instruction of Vantastival Ltd.. The Ticket Holder consents for photographic images taken of themselves at the Event to be used by Vantastival Ltd. in future publications and/or any and all future promotion the Event, online and in print.
+\n\n7. Use of the Ticket is contingent upon unconditional and voluntary acceptance to be searched for the presence of drugs, weapons and/or other prohibited items at any time. Finding of any such items will lead to the immediate revocation of this licence and denial of admission or immediate removal from the Event.
+\n\n8. Persons under 18 years old will only be admitted to the Event if accompanied by a parent or guardian over the age of 21 who will sign for and accept responsibility for said person. Garda ID or passport required. The consumption of alcohol by any person under 18 will result in removal from the Event of that person and of their guardian.
+\n\n9. Vantastival Ltd. reserves the right to refuse entry of the Ticket holder to the Event site. Attendees found to be causing damage to the site, the site infrastructure, causing harm to any other person on site or in breach of these terms and conditions will be subject to prosecution.
+\n\n10. Vantastival Ltd. reserves the right to search all persons, personal property and vehicles and refuse admission to, or eject from, the site any person who refuses to be searched by a security official.
+\n\n11. Strobe lighting may be used during the festival.
+\n\n12. WARNING – prolonged exposure to loud noise may cause damage to your hearing.
+\n\n13. No glass bottles will be allowed in the festival site.
+\n\n14. Any item that is deemed unsuitable or unsafe may be refused at our discretion.
+\n\n15. If the Ticket was obtained from an unauthorised source it may be lost, stolen or counterfeit and if so is worthless and void.
+\n\n16. The possession of a Ticket to Vantastival shall constitute an acceptance by the holder of these terms and conditions and imply an undertaking on the part of the holder to observe them."
+            android:id="@+id/textView" />
+    </ScrollView>
 
 </LinearLayout>

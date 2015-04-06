@@ -4,10 +4,22 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.mycompany.vantastival.Test$PlaceholderFragment">
+    tools:context="com.mycompany.vantastival.Test$PlaceholderFragment"
+    android:orientation="vertical">
 
     <TextView android:id="@+id/section_label" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" android:text="Bell Tents"/>
+        android:layout_height="wrap_content" android:text="Bell Tents"
+        android:paddingLeft="10dp" />
 
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+    <TextView
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="We have both 4 and 5 metre bell tents for boutique camping. These make great comfortable and fun places to stay in for a weekend.\n\nAll our bell tents are made of the finest cotton canvas which allows the tent to breath whilst keeping the elements out! They all have a fitted groundsheet and carpeted interior.\n\n4 metre bell tent – €180 sleeps max 4/n5 metre bell tent – €260 sleeps max 6 Mattresses; €30 single/€50 Double\n\nTo book call 041 988 4771\nOr email adminireland@lpmbohemia.com"
+        android:id="@+id/textView" />
+    </ScrollView>
 
 </LinearLayout>

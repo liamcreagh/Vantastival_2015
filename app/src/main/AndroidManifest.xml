@@ -30,8 +30,7 @@
         </activity>
         <activity
             android:name=".MapMain"
-            android:label="@string/title_activity_map_main"
-             >
+            android:label="@string/title_activity_map_main" >
         </activity>
         <activity
             android:name=".BandMain"
@@ -56,7 +55,7 @@
         <activity
             android:name=".StagesMain"
             android:label="@string/title_activity_stages_main"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".StagesMainstage"
@@ -66,47 +65,51 @@
         <activity
             android:name=".StagesVanhalla"
             android:label="@string/title_activity_stages_vanhalla"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".StagesMusicmaker"
             android:label="@string/title_activity_stages_musicmaker"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".StagesUnplugged"
             android:label="@string/title_activity_stages_unplugged"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".StagesMelomania"
             android:label="@string/title_activity_stages_melomania"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".InfoFestival"
             android:label="@string/title_activity_info_festival"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".InfoCamping"
             android:label="@string/title_activity_info_camping"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".InfoCheckout"
             android:label="@string/title_activity_info_checkout"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".InfoTickets"
             android:label="@string/title_activity_info_tickets"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".InfoVenue"
             android:label="@string/title_activity_info_venue"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Touch"
+            android:label="@string/title_activity_touch" >
         </activity>
     </application>
 

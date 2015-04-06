@@ -4,10 +4,23 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.mycompany.vantastival.Test$PlaceholderFragment">
+    tools:context="com.mycompany.vantastival.Test$PlaceholderFragment"
+    android:orientation="vertical">
 
     <TextView android:id="@+id/section_label" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" android:text="Food &amp; Drink"/>
+        android:layout_height="wrap_content" android:text="Food &amp; Drink"
+        android:paddingLeft="10dp"/>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+        <TextView
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="There will be a range of food and drink stalls open all weekend which should cater to every taste. If you’re looking for a decent cup of gourmet coffee to keep you fueled, just look for one of our colourful vintage caravans, grab a cappuccino, have a seat and a break from all the madness!"
+            android:id="@+id/textView" />
+    </ScrollView>
 
 
 </LinearLayout>

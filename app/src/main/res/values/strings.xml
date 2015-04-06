@@ -28,5 +28,6 @@
     <string name="title_activity_info_tickets">Tickets Info</string>
     <string name="title_activity_info_venue">Venue Info</string>
     <string name="back">Back</string>
+    <string name="title_activity_touch">Touch</string>
 
 </resources>

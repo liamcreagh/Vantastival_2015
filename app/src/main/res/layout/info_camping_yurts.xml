@@ -4,10 +4,22 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.mycompany.vantastival.Test$PlaceholderFragment">
+    tools:context="com.mycompany.vantastival.Test$PlaceholderFragment"
+    android:orientation="vertical">
 
     <TextView android:id="@+id/section_label" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" android:text="Yurts"/>
+        android:layout_height="wrap_content" android:text="Yurts"
+        android:paddingLeft="10dp"/>
 
-
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+        <TextView
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="We have a variety of different sized yurts to accommodate all manner of groups and budgets from a gang of 8 to an intimate couple. You can stay in absolute luxury or in complete comfort. All our yurts have a carpeted interior, cushions, table and supplies for a comfortable and fun weekend.\n\nThe deluxe interior consists of a proper double bed with a mosquito net,carpet, table, chairs, wash hand basin and silk cushioned benches. The basic interior includes carpet, 2 mattresses, scatter cushions and a table.\n\n10’ Yurt  – €450 with basic interior package sleeps max 2\n\n16’ Yurt – €780 with basic interior package sleeps max 6\n\n20’ Yurt – €880 with basic interior package sleeps max 8"
+            android:id="@+id/textView" />
+    </ScrollView>
+    
 </LinearLayout>

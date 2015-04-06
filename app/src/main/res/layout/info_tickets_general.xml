@@ -4,10 +4,24 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.mycompany.vantastival.Test$PlaceholderFragment">
+    tools:context="com.mycompany.vantastival.Test$PlaceholderFragment"
+    android:orientation="vertical">
 
     <TextView android:id="@+id/section_label" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" android:text="About"/>
+        android:layout_height="wrap_content" android:text="About"
+        android:paddingLeft="10dp"/>
 
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+        <TextView
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Weekend tickets available: €95 per person camping
+
+Scroll down past ticket shop to read full details of ticket types and prices. All tickets are subject to Ticketscript booking fees.  Please see TERMS AND CONDITIONS below.\n\n**All ticket prices are subject to Ticketscript booking fees.**\n\nChristmas Special – weekend camping: €68   SOLD OUT\n\nFestival Bumper Bundle – Vantastival, Sunflowerfest &amp; Spirit of Folk: €170   SOLD OUT\n\nEarlybird weekend camping: €80   SOLD OUT"
+            android:id="@+id/textView" />
+    </ScrollView>
 
 </LinearLayout>

@@ -4,10 +4,23 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.mycompany.vantastival.Test$PlaceholderFragment">
+    tools:context="com.mycompany.vantastival.Test$PlaceholderFragment"
+    android:orientation="vertical">
 
     <TextView android:id="@+id/section_label" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" android:text="Caravans &amp; Campervans"/>
+        android:layout_height="wrap_content" android:text="Caravans &amp; Campervans"
+        android:paddingLeft="10dp"/>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+        <TextView
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="On arrival, campervan and caravan drivers must leave their vehicles while exchanging tickets for wristbands at the box office.\n\nOnce on site, campervans must remain on site – vehicles leaving the site during the weekend will not be re-admitted.\n\nAfter exchanging tickets for wristbands, caravans may be pulled to the campsite by car, then the car removed to the off-site Car Park."
+            android:id="@+id/textView" />
+    </ScrollView>
 
 
 </LinearLayout>

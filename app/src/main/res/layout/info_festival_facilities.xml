@@ -4,10 +4,23 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.mycompany.vantastival.Test$PlaceholderFragment">
+    tools:context="com.mycompany.vantastival.Test$PlaceholderFragment"
+    android:orientation="vertical">
 
     <TextView android:id="@+id/section_label" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" android:text="Facilities"/>
+        android:layout_height="wrap_content" android:text="Facilities"
+        android:paddingLeft="10dp"/>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+        <TextView
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Toilets will be dispersed throughout the site, as will drinking-water dispensers. We will have one shower block located close to the family campsite. There will be a baby-changing tent with access to hot water and electricity in the family camping area."
+            android:id="@+id/textView" />
+    </ScrollView>
 
 
 </LinearLayout>
