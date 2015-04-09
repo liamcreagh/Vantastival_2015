@@ -1,19 +1,25 @@
 package com.mycompany.vantastival;
 
 import android.content.Intent;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.Toast;
+
+
 
 import com.mycompany.vantastival.stab.BandsFragmentPagerAdapter;
-import com.mycompany.vantastival.stab.NewsFragmentPagerAdapter;
 import com.mycompany.vantastival.stab.SlidingTabLayout;
 
 
 public class BandMain extends ActionBarActivity {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +42,8 @@ public class BandMain extends ActionBarActivity {
         getMenuInflater().inflate(R.menu.menu_bands_main, menu);
         return true;
     }
+
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

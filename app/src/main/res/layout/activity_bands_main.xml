@@ -19,4 +19,61 @@
         android:layout_weight="1"
         android:background="#FFF" />
 
+
+    <EditText
+        android:id="@+id/editTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Title" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/editDuedate"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Due Date"
+        android:inputType="date" />
+
+    <EditText
+        android:id="@+id/editCourse"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Course" />
+
+    <EditText
+        android:id="@+id/editNotes"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Notes"
+        android:inputType="textMultiLine" android:lines="6"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/addAssignment"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:onClick="addAssignment"
+            android:text="Add" />
+
+        <Button
+            android:id="@+id/viewBtn"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="View" android:onClick="viewAssignments"/>
+
+    </LinearLayout>
+
+
+
 </LinearLayout>

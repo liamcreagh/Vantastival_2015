@@ -10,6 +10,9 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.mycompany.vantastival.db.AssignmentTracker;
+import com.mycompany.vantastival.db.addassignment;
+
 
 public class MainActivity extends ActionBarActivity implements AdapterView.OnItemClickListener {
 
@@ -87,16 +90,16 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
                 menuClicked = new Intent(this, StagesMain.class);
                 break;
             case 1:
-                menuClicked = new Intent(this, BandMain.class);
+                menuClicked = new Intent(this, PopupInfo.class);
                 break;
             case 2:
                 menuClicked = new Intent(this, InfoMain.class);
                 break;
             case 3:
-                menuClicked = new Intent(this, NewsMain.class);
+                menuClicked = new Intent(this, AssignmentTracker.class);
                 break;
             case 4:
-                menuClicked = new Intent(this, MapMain.class);
+                menuClicked = new Intent(this, addassignment.class);
                 break;
             case 5:
                 menuClicked = new Intent(this, MusicMain.class);

@@ -111,6 +111,14 @@
             android:name=".Touch"
             android:label="@string/title_activity_touch" >
         </activity>
+        <activity
+            android:name=".db.AssignmentTracker"
+            android:label="@string/title_activity_assignment_tracker" >
+        </activity>
+        <activity
+            android:name=".db.addassignment"
+            android:label="@string/title_activity_addassignment" >
+        </activity>
     </application>
 
 </manifest>

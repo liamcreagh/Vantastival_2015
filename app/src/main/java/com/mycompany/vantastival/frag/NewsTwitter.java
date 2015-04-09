@@ -16,5 +16,10 @@ public class NewsTwitter extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.news_twitter, container, false);
         return view;
+
+
+
+
+
     }
 }
