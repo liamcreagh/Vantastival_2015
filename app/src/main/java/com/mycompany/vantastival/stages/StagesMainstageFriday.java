@@ -9,12 +9,22 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.mycompany.vantastival.R;
+import com.mycompany.vantastival.db.DBAdapter;
 
 public class StagesMainstageFriday extends Fragment {
+
+
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.stages_mainstage_friday, container, false);
         return view;
+
+
+
+
+
+
     }
 }

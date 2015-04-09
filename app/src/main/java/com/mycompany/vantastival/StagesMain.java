@@ -1,20 +1,92 @@
 package com.mycompany.vantastival;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
+
+import com.mycompany.vantastival.db.DBAdapter;
+import com.mycompany.vantastival.db.Message;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 
 
 public class StagesMain extends ActionBarActivity {
+
+
+    DBAdapter db = new DBAdapter(this);
+
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stages_main);
+
+
+
+        try {
+            String destPath = "/data/data/" + getPackageName() + "/databases/AssignmentDB";
+            File f = new File(destPath);
+            if (!f.exists()) {
+                CopyDB(getBaseContext().getAssets().open("db"),
+                        new FileOutputStream(destPath));
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+
+
+
+
+
+        db.open();
+        String var = db.getStage("main", "sat");
+
+
+
+        Message.message(this, var);
+
+
+        db.close();
+
+
+       /*
+
+Cursor c = db.getRecordStage("main");
+        if (c.moveToFirst())
+            DisplayRecord(c);
+        else
+            Toast.makeText(this, "No Assignments found", Toast.LENGTH_LONG).show();
+            */
+        db.close();
+
+
+
+
+
+
+
+
+
     }
+
+
 
 
     public void getMainStage(View view) {
@@ -65,4 +137,30 @@ public class StagesMain extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
+
+
+
+    public void CopyDB(InputStream inputStream, OutputStream outputStream)
+            throws IOException {
+        //---copy 1K bytes at a time---
+        byte[] buffer = new byte[1024];
+        int length;
+        while ((length = inputStream.read(buffer)) > 0) {
+            outputStream.write(buffer, 0, length);
+        }
+        inputStream.close();
+        outputStream.close();
+    }
+
+    public void DisplayRecord(Cursor c)
+    {
+        Toast.makeText(this,
+                "id: " + c.getString(0) + "\n" +
+                        "Band Name: " + c.getString(1) + "\n" +
+                        "Stage:  " + c.getString(2),
+                Toast.LENGTH_SHORT).show();
+    }
+
 }

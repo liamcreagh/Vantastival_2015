@@ -1,22 +1,37 @@
 package com.mycompany.vantastival;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
-import com.mycompany.vantastival.db.AssignmentTracker;
-import com.mycompany.vantastival.db.addassignment;
+// import com.mycompany.vantastival.db.AssignmentTracker;
+import com.mycompany.vantastival.db.DBAdapter;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 
 
 public class MainActivity extends ActionBarActivity implements AdapterView.OnItemClickListener {
 
     ListView mainMenu;
+
+    DBAdapter db = new DBAdapter(this);
 
     // Data source in a string based array
     String[] menuItems = {"Stages", "Bands", "Info", "News", "Map", "Music"};
@@ -25,6 +40,9 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
 
 
 
@@ -37,7 +55,7 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
 
         ArrayAdapter<String> adaptedArray = new ArrayAdapter<String>(this, R.layout.mainmenu_listview, R.id.mainMenuItem,  menuItems);
 
-       // ArrayAdapter<String> adaptedArray = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,  menuItems);
+
 
         mainMenu.setAdapter(adaptedArray);
 
@@ -45,6 +63,143 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
         mainMenu.setOnItemClickListener(this);
 
 
+
+
+
+
+
+
+
+        try {
+            String destPath = "/data/data/" + getPackageName() + "/databases/AssignmentDB";
+            File f = new File(destPath);
+            if (!f.exists()) {
+                CopyDB(getBaseContext().getAssets().open("db"),
+                        new FileOutputStream(destPath));
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+
+
+
+
+        db.open();
+
+        // Param (Band Name, Stage, Day, Time, Description)
+        long id = db.insertRecord("The Beatles", "main", "fri", "4.20", "Mop Top");
+        id = db.insertRecord("U2", "main", "sat", "7.20", "Bonos on the edge");
+        id = db.insertRecord("Led Zeppelin", "van", "sat", "6.20", "Whole lotta Vans");
+        id = db.insertRecord("The Eagles", "van", "sat", "5.20", "Hotel Talifornia");
+        id = db.insertRecord("Pink Floyd", "main", "sat", "8.20", "Which ones pink?");
+        id = db.insertRecord("AC/DC", "main", "fri", "9.20", "The airbourne tribute act");
+        id = db.insertRecord("Aerosmith", "van", "sat", "4.20", "Bonos on the edge");
+        id = db.insertRecord("Queen", "main", "fri", "9.20", "The bands named queen. . . . . Were you really surprised");
+        id = db.insertRecord("The Rolling Stones", "main", "sat", "4.20", "Bonos on the edge");
+        id = db.insertRecord("ABBA", "van", "sat", "11.20", "Swedish and bad");
+
+        db.close();
+
+        //DBAdapter db = new DBAdapter(this);
+
+
+        //---add an assignment---
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //---get all Records---
+/*
+        db.open();
+        Cursor c = db.getAllRecords();
+        if (c.moveToFirst())
+        {
+            do {
+                DisplayRecord(c);
+            } while (c.moveToNext());
+        }
+        db.close();
+
+*/
+
+
+        /*
+        //---get a Record---
+        db.open();
+        Cursor c = db.getRecord(2);
+        if (c.moveToFirst())
+            DisplayRecord(c);
+        else
+            Toast.makeText(this, "No Assignments found", Toast.LENGTH_LONG).show();
+        db.close();
+        */
+
+
+        //---update Record---
+        /*
+        db.open();
+        if (db.updateRecord(1, "Hello Android", "2/19/2012", "DPR 224", "First Android Project"))
+            Toast.makeText(this, "Update successful.", Toast.LENGTH_LONG).show();
+        else
+            Toast.makeText(this, "Update failed.", Toast.LENGTH_LONG).show();
+        db.close();
+        */
+
+        /*
+        //---delete a Record---
+        db.open();
+        if (db.deleteRecord(1))
+            Toast.makeText(this, "Delete successful.", Toast.LENGTH_LONG).show();
+        else
+            Toast.makeText(this, "Delete failed.", Toast.LENGTH_LONG).show();
+        db.close();
+        */
+
+
+        class DBAdapter extends BaseAdapter {
+            private LayoutInflater mInflater;
+
+
+            //private ArrayList<>
+
+            @Override
+            public int getCount() {
+
+                return 0;
+            }
+
+            @Override
+            public Object getItem(int arg0) {
+
+                return null;
+            }
+
+            @Override
+            public long getItemId(int arg0) {
+
+                return 0;
+            }
+
+            @Override
+            public View getView(int arg0, View arg1, ViewGroup arg2) {
+
+                return null;
+            }
+
+        }
 
 
 
@@ -96,10 +251,10 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
                 menuClicked = new Intent(this, InfoMain.class);
                 break;
             case 3:
-                menuClicked = new Intent(this, AssignmentTracker.class);
+                menuClicked = new Intent(this, NewsMain.class);
                 break;
             case 4:
-                menuClicked = new Intent(this, addassignment.class);
+                menuClicked = new Intent(this, MapMain.class);
                 break;
             case 5:
                 menuClicked = new Intent(this, MusicMain.class);
@@ -107,6 +262,43 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
         } // end of switch
         startActivity(menuClicked);
     } // end of "onItemClick()" method
+
+
+
+    //  SGLite Methods
+
+
+    public void CopyDB(InputStream inputStream, OutputStream outputStream)
+            throws IOException {
+        //---copy 1K bytes at a time---
+        byte[] buffer = new byte[1024];
+        int length;
+        while ((length = inputStream.read(buffer)) > 0) {
+            outputStream.write(buffer, 0, length);
+        }
+        inputStream.close();
+        outputStream.close();
+    }
+
+    public void DisplayRecord(Cursor c)
+    {
+        Toast.makeText(this,
+                "id: " + c.getString(0) + "\n" +
+                        "Band Name: " + c.getString(1) + "\n" +
+                        "Stage:  " + c.getString(2),
+                Toast.LENGTH_SHORT).show();
+    }
+
+    public void addAssignment(View view)
+    {
+
+        Intent i = new Intent("com.pinchtapzoom.addassignment");
+        startActivity(i);
+        Log.d("TAG", "Clicked");
+    }
+
+
+    // end of methods
 
 
 
