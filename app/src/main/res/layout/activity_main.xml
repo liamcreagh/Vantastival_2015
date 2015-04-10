@@ -23,11 +23,12 @@
     <ListView
         android:layout_marginTop="20dp"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_height="300dp"
         android:id="@+id/mainMenulistView"
 
         android:layout_gravity="center_vertical|center_horizontal"
  />
+
 
 
 </LinearLayout>

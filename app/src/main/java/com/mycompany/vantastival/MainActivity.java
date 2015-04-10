@@ -14,6 +14,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
+
+import android.widget.SimpleCursorAdapter;
 import android.widget.Toast;
 
 // import com.mycompany.vantastival.db.AssignmentTracker;
@@ -32,6 +34,7 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
     ListView mainMenu;
 
     DBAdapter db = new DBAdapter(this);
+    public static String PACKAGE_NAME;
 
     // Data source in a string based array
     String[] menuItems = {"Stages", "Bands", "Info", "News", "Map", "Music"};
@@ -67,7 +70,7 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
 
 
 
-
+        PACKAGE_NAME = getPackageName();
 
 
         try {
@@ -82,32 +85,39 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
-
-
-
-
         db.open();
+ if(db.isPopulated()){}
+       else {
 
-        // Param (Band Name, Stage, Day, Time, Description)
-        long id = db.insertRecord("The Beatles", "main", "fri", "4.20", "Mop Top");
-        id = db.insertRecord("U2", "main", "sat", "7.20", "Bonos on the edge");
-        id = db.insertRecord("Led Zeppelin", "van", "sat", "6.20", "Whole lotta Vans");
-        id = db.insertRecord("The Eagles", "van", "sat", "5.20", "Hotel Talifornia");
-        id = db.insertRecord("Pink Floyd", "main", "sat", "8.20", "Which ones pink?");
-        id = db.insertRecord("AC/DC", "main", "fri", "9.20", "The airbourne tribute act");
-        id = db.insertRecord("Aerosmith", "van", "sat", "4.20", "Bonos on the edge");
-        id = db.insertRecord("Queen", "main", "fri", "9.20", "The bands named queen. . . . . Were you really surprised");
-        id = db.insertRecord("The Rolling Stones", "main", "sat", "4.20", "Bonos on the edge");
-        id = db.insertRecord("ABBA", "van", "sat", "11.20", "Swedish and bad");
 
-        db.close();
+
+
+    // Param (Band Name, Stage, Day, Time, Description)
+    long id = db.insertRecord("The Beatles", "main", "fri", "10:20:00", "Mop Top");
+    id = db.insertRecord("U2", "main", "sat", "12:20:00", "Bonos on the edge");
+    id = db.insertRecord("Led Zeppelin", "van", "sat", "13:20:00", "Whole lotta Vans");
+    id = db.insertRecord("The Eagles", "van", "sat", "14:20:00", "Hotel Talifornia");
+    id = db.insertRecord("Pink Floyd", "main", "sat", "15:20:00", "Which ones pink?");
+    id = db.insertRecord("AC/DC", "main", "fri", "16:20:00", "The airbourne tribute act");
+    id = db.insertRecord("Aerosmith", "van", "sat", "17:20:00", "Bonos on the edge");
+    id = db.insertRecord("Queen", "main", "fri", "18:20:00", "The bands named queen. . . . . Were you really surprised");
+    id = db.insertRecord("The Rolling Stones", "main", "sat", "17:20:00", "Bonos on the edge");
+    id = db.insertRecord("ABBA", "van", "sat", "19:20:00", "Swedish and bad");
+
+ }
+
+    db.close();
+
+
 
         //DBAdapter db = new DBAdapter(this);
 
 
         //---add an assignment---
+
+
+
+
 
 
 
@@ -178,6 +188,9 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
             @Override
             public int getCount() {
 
+
+
+
                 return 0;
             }
 
@@ -245,7 +258,7 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
                 menuClicked = new Intent(this, StagesMain.class);
                 break;
             case 1:
-                menuClicked = new Intent(this, PopupInfo.class);
+                menuClicked = new Intent(this, BandMain.class);
                 break;
             case 2:
                 menuClicked = new Intent(this, InfoMain.class);

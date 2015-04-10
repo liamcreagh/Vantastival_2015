@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ListView;
+import android.widget.SimpleCursorAdapter;
 import android.widget.Toast;
 
 import com.mycompany.vantastival.db.DBAdapter;
@@ -55,15 +57,10 @@ public class StagesMain extends ActionBarActivity {
 
 
 
-        db.open();
-        String var = db.getStage("main", "sat");
 
 
 
-        Message.message(this, var);
 
-
-        db.close();
 
 
        /*
@@ -74,7 +71,7 @@ Cursor c = db.getRecordStage("main");
         else
             Toast.makeText(this, "No Assignments found", Toast.LENGTH_LONG).show();
             */
-        db.close();
+
 
 
 
@@ -161,6 +158,33 @@ Cursor c = db.getRecordStage("main");
                         "Band Name: " + c.getString(1) + "\n" +
                         "Stage:  " + c.getString(2),
                 Toast.LENGTH_SHORT).show();
+    }
+
+
+
+    public void populate(){
+
+       /*
+        db.open();
+
+
+        Cursor cursor = db.getStageDay("main", "sat");
+
+
+
+        // THE DESIRED COLUMNS TO BE BOUND
+        String[] columns = new String[] {DBAdapter.KEY_BANDNAME, DBAdapter.KEY_TIME };
+        // THE XML DEFINED VIEWS WHICH THE DATA WILL BE BOUND TO
+        int[] to = new int[] { R.id.bandNames, R.id.stageTimes};
+
+        // CREATE THE ADAPTER USING THE CURSOR POINTING TO THE DESIRED DATA AS WELL AS THE LAYOUT INFORMATION
+        SimpleCursorAdapter myAdapter = new SimpleCursorAdapter(getBaseContext(), R.layout.listview_item_stages, cursor, columns, to);
+
+        ListView myList = (ListView) findViewById(R.id.listViewMainStage);
+        myList.setAdapter(myAdapter);
+        db.close(); */
+
+
     }
 
 }

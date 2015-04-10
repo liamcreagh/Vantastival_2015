@@ -39,4 +39,5 @@
         android:text="Melomania Stage"
         android:id="@+id/buttonMelomania"
         android:onClick="getMelomaniaStage"/>
+
 </LinearLayout>
