@@ -1,0 +1,15 @@
+<resources>
+    <drawable name="focused">#ff5500</drawable>
+    <drawable name="selected">#FF00FF</drawable>
+    <drawable name="black">#000000</drawable>
+    <drawable name="green">#00FF00</drawable>
+    <drawable name="lightblue">#2196F3</drawable>
+    <color name="transwhite">#80FFFFFF</color>
+    <color name="transwhiter">#CCFFFFFF</color>
+    <color name="lighterblue">#42A5F5</color>
+    <color name="lightestblue">#E3F2FD</color>
+
+
+
+
+</resources>

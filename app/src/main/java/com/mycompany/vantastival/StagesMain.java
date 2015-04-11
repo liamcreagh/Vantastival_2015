@@ -1,7 +1,11 @@
 package com.mycompany.vantastival;
 
+import android.app.ActionBar;
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -22,12 +26,12 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 
+
+
 public class StagesMain extends ActionBarActivity {
 
 
     DBAdapter db = new DBAdapter(this);
-
-
 
 
 
@@ -58,9 +62,11 @@ public class StagesMain extends ActionBarActivity {
 
 
 
+        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
 
+        actionBar.setBackgroundDrawable(new ColorDrawable(0xff2196F3));
 
-
+  
 
 
        /*

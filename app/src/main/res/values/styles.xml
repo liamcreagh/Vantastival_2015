@@ -8,9 +8,10 @@
     <style name="AppTheme" parent="AppBasedTheme">
         <item name="android:colorBackground">#E3F2FD</item>
         <item name="android:editTextColor">#2196F3</item>
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
 
 
-
+<!--
         <item name="android:textColorSecondary">#ffb62a23</item>
 
         <item name="android:textColorTertiary">#0D47A1</item>
@@ -19,10 +20,23 @@
 
         <item name="android:textColorSecondaryInverse">#ffb62a23</item>
 
-        <item name="android:textColorTertiaryInverse">#1976D2</item>
+
+        <item name="android:textColorTertiaryInverse">#1976D2</item> -->
 
 
     </style>
+
+
+
+
+
+        <!-- ActionBar styles -->
+        <style name="MyActionBar" >
+            <item name="android:background">#2196F3</item>
+        </style>
+
+
+
 
 
 

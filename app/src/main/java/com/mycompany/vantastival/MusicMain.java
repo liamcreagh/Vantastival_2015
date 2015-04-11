@@ -2,6 +2,7 @@ package com.mycompany.vantastival;
 
 import android.app.ListActivity;
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.media.MediaPlayer;
 import android.os.Environment;
 import android.support.v7.app.ActionBarActivity;
@@ -50,6 +51,10 @@ public class MusicMain extends ActionBarActivity implements AdapterView.OnItemCl
             toast(mySongs[1].toString());
         }
         */
+
+        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+
+        actionBar.setBackgroundDrawable(new ColorDrawable(0xff2196F3));
 
 
         listViewMP = (ListView) findViewById(R.id.listViewMusicPlayer);

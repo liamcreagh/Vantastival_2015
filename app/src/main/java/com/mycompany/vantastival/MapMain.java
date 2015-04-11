@@ -2,6 +2,7 @@ package com.mycompany.vantastival;
 
 import android.content.Intent;
 import android.graphics.Matrix;
+import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -39,7 +40,9 @@ public class MapMain extends ActionBarActivity  {
         setContentView(R.layout.activity_map_main);
 
 
+        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
 
+        actionBar.setBackgroundDrawable(new ColorDrawable(0xff2196F3));
 
 
          vScroll = (ScrollView) findViewById(R.id.vScroll);

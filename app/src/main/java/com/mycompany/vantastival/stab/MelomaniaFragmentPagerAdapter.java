@@ -9,6 +9,7 @@ import com.mycompany.vantastival.stages.StagesMainstageFriday;
 import com.mycompany.vantastival.stages.StagesMainstageSaturday;
 import com.mycompany.vantastival.stages.StagesMainstageSunday;
 import com.mycompany.vantastival.stages.StagesMelomaniaFriday;
+import com.mycompany.vantastival.stages.StagesMelomaniaSaturday;
 import com.mycompany.vantastival.stages.StagesMelomaniaSunday;
 
 
@@ -35,7 +36,7 @@ public class MelomaniaFragmentPagerAdapter extends FragmentPagerAdapter {
         if(position == 0){
             return new StagesMelomaniaFriday();
         } else if(position == 1) {
-            return new StagesMainstageSaturday();
+            return new StagesMelomaniaSaturday();
         } else if(position == 2) {
             return new StagesMelomaniaSunday();
         }

@@ -1,6 +1,7 @@
 package com.mycompany.vantastival;
 
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
@@ -21,6 +22,9 @@ public class InfoVenue extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info_venue);
 
+        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+
+        actionBar.setBackgroundDrawable(new ColorDrawable(0xff2196F3));
 
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.venueViewPager);

@@ -1,6 +1,8 @@
 package com.mycompany.vantastival;
 
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -14,6 +16,11 @@ public class InfoMain extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info_main);
+
+        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+
+        actionBar.setBackgroundDrawable(new ColorDrawable(0xff2196F3));
+
     }
 
 
@@ -67,4 +74,13 @@ startActivity(intent);
 
         return super.onOptionsItemSelected(item);
     }
+
+
+    public void getFacebook(){
+        Uri uri = Uri.parse("https://www.facebook.com/Vantastivalfestival");
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
+    }
+
+
 }

@@ -5,7 +5,8 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.mycompany.vantastival.Test$PlaceholderFragment"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/repeat">
 
     <TextView android:id="@+id/section_label" android:layout_width="wrap_content"
         android:layout_height="wrap_content" android:text="Green Policy"
@@ -18,7 +19,33 @@
             android:padding="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=""
+            android:text="Environmental Statement
+
+\n\nThe Vantastival team want to make this festival as environmentally sound as possible. We care passionately about the sustainability of our activities; about climate change and its potential impacts, and about the future, which our children will inherit.
+
+\n\nIreland is following an unsustainable path, however we believe that a sustainable one would not exclude recreational use of the vehicles we love. We must embrace clean, sustainable forms of mass public transport, yet that does not have to mean that we sacrifice what we love to do. We dream of a future in which traffic jams are the exception, not the rule. Not because owning and driving a car, van or scooter is too expensive; nor because the right to do so is restricted, but because the alternatives for most people are more appealing. Imagine how clean and quiet our country could be!
+
+\n\nWe understand that we are wholly dependent on fossil fuels, and that the foundations of our dependence are unsustainable and crumbling. However we are also pragmatic, and know that Ireland will always be reliant in some way on our road network given its geography and existing development.
+
+\n\nWe do not believe Ireland’s path to sustainability should necessarily be through sacrifice and the imposition of limits. We see climate change as a great opportunity to make our country happier, healthier, wealthier and more efficient. Ireland has some of the best renewable energy potential in Europe. Reducing the world’s carbon emissions presents a great opportunity for the development of international energy interdependence, and that can only be a good thing for our small country, irrespective of climate change.
+
+\n\nEnhancing our environment needs to happen on many other levels, and that is why Vantastival strives to ensure that much of the food you will eat at the festival is local and/or organic; that resources are used as efficiently as possible, and that the waste which we create is minimal, and is managed as sustainably as possible.
+
+\n\nWe encourage Vantastival goers to travel with friends; to do your bit to keep our beautiful venue clean, and to contribute positively to a great festival atmosphere. We hope you enjoy it!
+
+\n\nRubbish &amp; Recycling
+
+\n\nVantastival will operate a leave-no-trace policy, which in essence means that while we will happily process any recyclables on site, we ask you to take any other waste away with you and dispose of it in a responsible manner. Keeping the site clean enhances the festival experience for everyone and is particularly important as Bellurgan Park is a certified organic farm and we’d like to keep it that way.
+
+\n\nWaste management at Vantastival will be an experiment in sustainability. We’ve all see the filth and detritus at major festivals – it is our aim to reduce to zero the amount going to landfills from our activities. This will require a degree of commitment and responsibility from each attendee. We’re operating a “Leave No Trace” policy, and will process all recyclables on site. Waste that doesn’t fall into existing recycling categories as displayed at the event should be disposed of off-site in an environmentally responsible manner.
+
+\n\nThere will be no “Litter Nazis” but we would greatly appreciate a responsible attitude from all our patrons – your actions will speak louder than words. A “tut-tut” approach should be taken to any litter louts. Feel free to vociferiously point out at any stage that this IS an organic farm, and should remain as such.
+
+\n\nCigarette butts are the bane of any festival, and we would strongly encourage smokers to carry a personal cigarette ashtray/receptacle, such as tobacco tin, film canister, zip-lock bag, or a beer can as a last resort. Anyone unfortunate enough to seen by event officials while inappropriately disposing of cigarette butts will be required to immediately perform 30 minutes of lighthearted “community service” processing recyclables, or to endure the same period in the Sin Bin – a holding pen with wet seats in full view of the festival public. “Name and Shame” is the game.
+
+\n\nOn entry to the site you will be provided with a clear plastic bag. Please use this for collecting your recyclables and drop it to our recycling centre when full. Recyclables cannot be accepted in black bags.
+
+\n\nPlease pack up your tent and take it home with you."
             android:id="@+id/textView" />
     </ScrollView>
 

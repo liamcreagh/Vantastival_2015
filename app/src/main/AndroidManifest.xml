@@ -58,6 +58,7 @@
         <activity
             android:name=".StagesMain"
             android:label="@string/title_activity_stages_main"
+
             android:screenOrientation="portrait" >
         </activity>
         <activity

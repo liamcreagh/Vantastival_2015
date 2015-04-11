@@ -5,6 +5,7 @@ import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.drawable.ColorDrawable;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -42,16 +43,16 @@ public class StagesMainstage extends ActionBarActivity {
         setContentView(R.layout.activity_stages_mainstage);
 
 
+        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+
+        actionBar.setBackgroundDrawable(new ColorDrawable(0xff2196F3));
+
         ViewPager viewPager = (ViewPager) findViewById(R.id.mainstageViewPager);
         viewPager.setAdapter(new MainstageFragmentPagerAdapter(getSupportFragmentManager(), StagesMainstage.this));
         SlidingTabLayout slidingTabLayout = (SlidingTabLayout) findViewById(R.id.mainstageTabs);
         slidingTabLayout.setViewPager(viewPager);
 
         viewPager.setOffscreenPageLimit(3);
-
-
-
-
 
 
         try {
@@ -69,34 +70,7 @@ public class StagesMainstage extends ActionBarActivity {
 
 
 
-
-
-
-
-
-
-
-
-        db.close();
-
-
-
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -143,12 +117,10 @@ public class StagesMainstage extends ActionBarActivity {
     }
 
 
-    public SimpleCursorAdapter populate(){
+    public SimpleCursorAdapter populate(String stage, String day){
         db.open();
 
-
-        Cursor cursor = db.getStageDay("main", "sat");
-
+        Cursor cursor = db.getStageDay(stage, day);
 
 
         // THE DESIRED COLUMNS TO BE BOUND
@@ -159,9 +131,7 @@ public class StagesMainstage extends ActionBarActivity {
         // CREATE THE ADAPTER USING THE CURSOR POINTING TO THE DESIRED DATA AS WELL AS THE LAYOUT INFORMATION
         SimpleCursorAdapter myAdapter = new SimpleCursorAdapter(getBaseContext(), R.layout.listview_item_stages, cursor, columns, to);
 
-
-
-return myAdapter;
+        return myAdapter;
 
 
     }

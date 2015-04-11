@@ -1,42 +1,105 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:layout_height="match_parent"
+    android:paddingTop="20dp"
+    android:background="@drawable/mainbackground"
+    android:orientation="vertical"
+    >
 
-    android:orientation="vertical">
-
-
-    <Button
+    <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Festival"
-        android:id="@+id/buttonFestival"
-        android:onClick="getFestivalInfo"/>
+        android:layout_height="150dp"
+        android:id="@+id/mainLogo"
+        android:src="@drawable/vantastivallogo"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:background="@color/transwhite"
+        />
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Festival"
+            android:id="@+id/buttonFestival"
+            android:onClick="getFestivalInfo"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:background="@color/transwhite"
+            android:textSize="30dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_margin="5dp"
+            android:textAllCaps="false"/>
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Camping"
         android:id="@+id/buttonCamping"
-        android:onClick="getCampingInfo"/>
+        android:onClick="getCampingInfo"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:background="@color/transwhite"
+        android:textSize="30dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_margin="5dp"
+        android:textAllCaps="false"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Tickets"
         android:id="@+id/buttonTickets"
-        android:onClick="getTicketsInfo"/>
+        android:onClick="getTicketsInfo"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:background="@color/transwhite"
+        android:textSize="30dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_margin="5dp"
+        android:textAllCaps="false"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Venue"
+        android:layout_gravity="center_vertical|center_horizontal"
         android:id="@+id/buttonVenue"
-        android:onClick="getVenueInfo"/>
+        android:onClick="getVenueInfo"
+        android:textSize="30dp"
+        android:background="@color/transwhite"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_margin="5dp"
+        android:textAllCaps="false"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Check Out"
+        android:layout_gravity="center_vertical|center_horizontal"
         android:id="@+id/buttonCheckout"
-        android:onClick="getCheckoutInfo"/>
+        android:onClick="getCheckoutInfo"
+        android:textSize="30dp"
+        android:background="@color/transwhite"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_margin="5dp"
+        android:textAllCaps="false"/>
+
+
+    </LinearLayout>
 </LinearLayout>
 

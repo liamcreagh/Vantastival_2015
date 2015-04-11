@@ -29,7 +29,6 @@ import java.io.OutputStream;
 public class StagesMainstageFriday extends Fragment {
 
 
-    // DBAdapter db = new DBAdapter(getActivity());
 
 
     @Override
@@ -38,7 +37,7 @@ public class StagesMainstageFriday extends Fragment {
 
         ListView myList = (ListView) view.findViewById(R.id.listViewMainStage);
 
-        SimpleCursorAdapter myAdapter = ((StagesMainstage) getActivity()).populate();
+        SimpleCursorAdapter myAdapter = ((StagesMainstage) getActivity()).populate("main", "fri");
 
         myList.setAdapter(myAdapter);
 

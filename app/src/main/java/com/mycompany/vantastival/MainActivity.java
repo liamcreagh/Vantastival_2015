@@ -2,6 +2,7 @@ package com.mycompany.vantastival;
 
 import android.content.Intent;
 import android.database.Cursor;
+import android.net.Uri;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,7 +16,6 @@ import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 
-import android.widget.SimpleCursorAdapter;
 import android.widget.Toast;
 
 // import com.mycompany.vantastival.db.AssignmentTracker;
@@ -37,7 +37,7 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
     public static String PACKAGE_NAME;
 
     // Data source in a string based array
-    String[] menuItems = {"Stages", "Bands", "Info", "News", "Map", "Music"};
+    String[] menuItems = {"Stages", "Bands", "Info", "Map", "Music"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +56,7 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
         // Create an adapter 3 parameters - (this, layout, dataset)
 
 
-        ArrayAdapter<String> adaptedArray = new ArrayAdapter<String>(this, R.layout.mainmenu_listview, R.id.mainMenuItem,  menuItems);
+        ArrayAdapter<String> adaptedArray = new ArrayAdapter<String>(this, R.layout.listview_mainmenu, R.id.mainMenuItem,  menuItems);
 
 
 
@@ -93,16 +93,39 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
 
 
     // Param (Band Name, Stage, Day, Time, Description)
-    long id = db.insertRecord("The Beatles", "main", "fri", "10:20:00", "Mop Top");
-    id = db.insertRecord("U2", "main", "sat", "12:20:00", "Bonos on the edge");
-    id = db.insertRecord("Led Zeppelin", "van", "sat", "13:20:00", "Whole lotta Vans");
-    id = db.insertRecord("The Eagles", "van", "sat", "14:20:00", "Hotel Talifornia");
-    id = db.insertRecord("Pink Floyd", "main", "sat", "15:20:00", "Which ones pink?");
-    id = db.insertRecord("AC/DC", "main", "fri", "16:20:00", "The airbourne tribute act");
-    id = db.insertRecord("Aerosmith", "van", "sat", "17:20:00", "Bonos on the edge");
-    id = db.insertRecord("Queen", "main", "fri", "18:20:00", "The bands named queen. . . . . Were you really surprised");
-    id = db.insertRecord("The Rolling Stones", "main", "sat", "17:20:00", "Bonos on the edge");
-    id = db.insertRecord("ABBA", "van", "sat", "19:20:00", "Swedish and bad");
+    long id = db.insertRecord("Delorentos", "main", "fri", "10:20", "Mop Top");
+    id = db.insertRecord("Goldie Looking Chain", "main", "sat", "12:20", "Bonos on the edge");
+    id = db.insertRecord("Jinx Lennon", "van", "sat", "13:20", "Whole lotta Vans");
+    id = db.insertRecord("R.S.A.G.", "van", "sat", "14:20", "Hotel Talifornia");
+    id = db.insertRecord("King Kong Company", "main", "sat", "15:20", "Which ones pink?");
+    id = db.insertRecord("Rackhouse Pilfer", "main", "sun", "16:20", "The airbourne tribute act");
+    id = db.insertRecord("The Flaws", "van", "sat", "17:20", "Bonos on the edge");
+    id = db.insertRecord("Cry Monster Cry", "main", "fri", "18:20", "The bands named queen. . . . . Were you really surprised");
+    id = db.insertRecord("Bunoscionn", "main", "sat", "17:20", "Bonos on the edge");
+    id = db.insertRecord("The Crayon Set", "van", "sun", "19:20", "Swedish and bad");
+    id = db.insertRecord("New Secret Weapon", "main", "sun", "10:20", "Mop Top");
+     id = db.insertRecord("Eoin Dillon", "main", "sat", "12:20", "Bonos on the edge");
+     id = db.insertRecord("I\'m Your Vinyl", "van", "sun", "13:20", "Whole lotta Vans");
+     id = db.insertRecord("Tecimerico", "van", "sat", "14:20", "Hotel Talifornia");
+     id = db.insertRecord("Corner Boy", "main", "sat", "15:20", "Which ones pink?");
+     id = db.insertRecord("Black Svan", "main", "fri", "16:20", "The airbourne tribute act");
+     id = db.insertRecord("Fierce Mild", "van", "sat", "17:20", "Bonos on the edge");
+     id = db.insertRecord("Rudy Trixx", "main", "sun", "18:20", "The bands named queen. . . . . Were you really surprised");
+     id = db.insertRecord("The Bonny Men", "main", "sun", "17:20", "Bonos on the edge");
+     id = db.insertRecord("The Bionic Rats", "van", "sun", "19:20", "Swedish and bad");
+     id = db.insertRecord("Plutonic Dust", "main", "fri", "10:20", "Mop Top");
+     id = db.insertRecord("Temper-Mental Misselayneous", "main", "sat", "12:20", "Bonos on the edge");
+     id = db.insertRecord("Tell No Foxx", "van", "sat", "13:20", "Whole lotta Vans");
+     id = db.insertRecord("Elephant", "van", "sat", "14:20", "Hotel Talifornia");
+     id = db.insertRecord("Grouse", "main", "sat", "15:20", "Which ones pink?");
+     id = db.insertRecord("The Blood Red Mountain Band", "main", "sun", "16:20", "The airbourne tribute act");
+     id = db.insertRecord("Silence Noise Parade", "van", "sat", "17:20", "Bonos on the edge");
+     id = db.insertRecord("Cfit", "main", "fri", "18:20", "The bands named queen. . . . . Were you really surprised");
+     id = db.insertRecord("Decomposing In Paris", "main", "sun", "17:20", "Bonos on the edge");
+     id = db.insertRecord("The Hardchargers", "van", "fri", "19:20", "Swedish and bad");
+     id = db.insertRecord("We Raised Bears", "main", "fri", "18:20", "The bands named queen. . . . . Were you really surprised");
+     id = db.insertRecord("Let\'s Set Sail", "main", "sun", "17:20", "Bonos on the edge");
+     id = db.insertRecord("The Wood Burning Savages", "van", "sat", "19:20", "Swedish and bad");
 
  }
 
@@ -264,12 +287,9 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
                 menuClicked = new Intent(this, InfoMain.class);
                 break;
             case 3:
-                menuClicked = new Intent(this, NewsMain.class);
-                break;
-            case 4:
                 menuClicked = new Intent(this, MapMain.class);
                 break;
-            case 5:
+            case 4:
                 menuClicked = new Intent(this, MusicMain.class);
                 break;
         } // end of switch
@@ -308,6 +328,21 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
         Intent i = new Intent("com.pinchtapzoom.addassignment");
         startActivity(i);
         Log.d("TAG", "Clicked");
+    }
+
+
+    public void getFacebook(View view){
+        Uri uri = Uri.parse("https://www.facebook.com/Vantastivalfestival");
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
+    }
+
+
+
+    public void getTwitter(View view){
+        Uri uri = Uri.parse("https://twitter.com/vantastival");
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
     }
 
 

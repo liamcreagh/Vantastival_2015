@@ -1,43 +1,103 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:layout_height="match_parent"
     android:background="@drawable/mainbackground"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:paddingTop="20dp"
+    >
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:id="@+id/mainLogo"
+        android:src="@drawable/vantastivallogo"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:background="@color/transwhite"
+        />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20px">
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Main Stage"
         android:id="@+id/buttonMainstage"
-        android:onClick="getMainStage"/>
+        android:onClick="getMainStage"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:background="@color/transwhite"
+        android:textSize="30dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_margin="5dp"
+        android:textAllCaps="false"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Vanhalla"
         android:id="@+id/buttonVanhalla"
-        android:onClick="getVanhallaStage"/>
+        android:onClick="getVanhallaStage"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:background="@color/transwhite"
+        android:textSize="30dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_margin="5dp"
+        android:textAllCaps="false"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Musicmaker"
         android:id="@+id/buttonMusicMaker"
-        android:onClick="getMusicmakerStage"/>
+        android:onClick="getMusicmakerStage"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:background="@color/transwhite"
+        android:textSize="30dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_margin="5dp"
+        android:textAllCaps="false"/>
     <Button
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="Unplugged Stage"
+    android:text="Unplugged"
     android:id="@+id/buttonUnplugged"
-    android:onClick="getUnpluggedStage"/>
+    android:onClick="getUnpluggedStage"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:background="@color/transwhite"
+        android:textSize="30dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_margin="5dp"
+        android:textAllCaps="false"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Melomania Stage"
+        android:text="Melomania"
         android:id="@+id/buttonMelomania"
-        android:onClick="getMelomaniaStage"/>
+        android:onClick="getMelomaniaStage"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:background="@color/transwhite"
+        android:textSize="30dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_margin="5dp"
+        android:textAllCaps="false"/>
+
+    </LinearLayout>
 
 </LinearLayout>

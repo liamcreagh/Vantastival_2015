@@ -7,14 +7,26 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
+import android.widget.SimpleCursorAdapter;
 
 import com.mycompany.vantastival.R;
+import com.mycompany.vantastival.StagesMainstage;
+import com.mycompany.vantastival.StagesUnplugged;
 
 public class StagesUnpluggedFriday extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.stages_unplugged_friday, container, false);
-        return view;
+        ListView myList = (ListView) view.findViewById(R.id.listViewMainStage);
+
+        SimpleCursorAdapter myAdapter = ((StagesUnplugged) getActivity()).populate("unp", "fri");
+
+        myList.setAdapter(myAdapter);
+
+
+        return myList;
+
     }
 }

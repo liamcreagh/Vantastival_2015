@@ -1,6 +1,7 @@
 package com.mycompany.vantastival;
 
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -26,6 +27,9 @@ public class BandMain extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bands_main);
 
+        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+
+        actionBar.setBackgroundDrawable(new ColorDrawable(0xff2196F3));
 
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.bandsViewPager);
