@@ -133,8 +133,68 @@ StringBuffer buffer = new StringBuffer();
 
         return mCursor;
 
-        // return mCursor;
+
     }
+
+    public Cursor getAtoj()
+    {
+
+        Cursor mCursor =  db.rawQuery("SELECT * FROM bands WHERE (\n" +
+                "         bandname like 'a%' " +
+                "      OR bandname like 'b%' " +
+                "      OR bandname like 'c%' " +
+                "      OR bandname like 'd%' " +
+                "      OR bandname like 'e%' " +
+                "      OR bandname like 'f%' " +
+                "      OR bandname like 'g%' " +
+                "      OR bandname like 'h%' " +
+                "      OR bandname like 'i%' " +
+                "      OR bandname like 'j%' )" +
+                "ORDER BY bandname asc"
+                , null);
+
+
+        return mCursor;
+
+    }
+
+    public Cursor getKtos()
+    {
+
+
+        Cursor mCursor =  db.rawQuery("SELECT * FROM bands WHERE (\n" +
+                "         bandname like 'k%' " +
+                "      OR bandname like 'l%' " +
+                "      OR bandname like 'm%' " +
+                "      OR bandname like 'n%' " +
+                "      OR bandname like 'o%' " +
+                "      OR bandname like 'p%' " +
+                "      OR bandname like 'q%' " +
+                "      OR bandname like 'r%' " +
+                "      OR bandname like 's%' )" +
+                "ORDER BY bandname asc"
+                , null);
+
+
+        return mCursor;
+    }
+
+    public Cursor getTtoz()
+    {
+        Cursor mCursor =  db.rawQuery("SELECT * FROM bands WHERE (\n" +
+                "         bandname like 't%' " +
+                "      OR bandname like 'u%' " +
+                "      OR bandname like 'v%' " +
+                "      OR bandname like 'w%' " +
+                "      OR bandname like 'x%' " +
+                "      OR bandname like 'y%' " +
+                "      OR bandname like 'z%' )" +
+                "ORDER BY bandname asc"
+                , null);
+
+        return mCursor;
+    }
+
 
 
 

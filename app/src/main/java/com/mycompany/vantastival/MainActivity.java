@@ -93,39 +93,39 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
 
 
     // Param (Band Name, Stage, Day, Time, Description)
-    long id = db.insertRecord("Delorentos", "main", "fri", "10:20", "Mop Top");
-    id = db.insertRecord("Goldie Looking Chain", "main", "sat", "12:20", "Bonos on the edge");
-    id = db.insertRecord("Jinx Lennon", "van", "sat", "13:20", "Whole lotta Vans");
-    id = db.insertRecord("R.S.A.G.", "van", "sat", "14:20", "Hotel Talifornia");
-    id = db.insertRecord("King Kong Company", "main", "sat", "15:20", "Which ones pink?");
-    id = db.insertRecord("Rackhouse Pilfer", "main", "sun", "16:20", "The airbourne tribute act");
-    id = db.insertRecord("The Flaws", "van", "sat", "17:20", "Bonos on the edge");
-    id = db.insertRecord("Cry Monster Cry", "main", "fri", "18:20", "The bands named queen. . . . . Were you really surprised");
-    id = db.insertRecord("Bunoscionn", "main", "sat", "17:20", "Bonos on the edge");
-    id = db.insertRecord("The Crayon Set", "van", "sun", "19:20", "Swedish and bad");
-    id = db.insertRecord("New Secret Weapon", "main", "sun", "10:20", "Mop Top");
-     id = db.insertRecord("Eoin Dillon", "main", "sat", "12:20", "Bonos on the edge");
-     id = db.insertRecord("I\'m Your Vinyl", "van", "sun", "13:20", "Whole lotta Vans");
-     id = db.insertRecord("Tecimerico", "van", "sat", "14:20", "Hotel Talifornia");
-     id = db.insertRecord("Corner Boy", "main", "sat", "15:20", "Which ones pink?");
-     id = db.insertRecord("Black Svan", "main", "fri", "16:20", "The airbourne tribute act");
-     id = db.insertRecord("Fierce Mild", "van", "sat", "17:20", "Bonos on the edge");
-     id = db.insertRecord("Rudy Trixx", "main", "sun", "18:20", "The bands named queen. . . . . Were you really surprised");
-     id = db.insertRecord("The Bonny Men", "main", "sun", "17:20", "Bonos on the edge");
-     id = db.insertRecord("The Bionic Rats", "van", "sun", "19:20", "Swedish and bad");
-     id = db.insertRecord("Plutonic Dust", "main", "fri", "10:20", "Mop Top");
-     id = db.insertRecord("Temper-Mental Misselayneous", "main", "sat", "12:20", "Bonos on the edge");
-     id = db.insertRecord("Tell No Foxx", "van", "sat", "13:20", "Whole lotta Vans");
-     id = db.insertRecord("Elephant", "van", "sat", "14:20", "Hotel Talifornia");
-     id = db.insertRecord("Grouse", "main", "sat", "15:20", "Which ones pink?");
-     id = db.insertRecord("The Blood Red Mountain Band", "main", "sun", "16:20", "The airbourne tribute act");
-     id = db.insertRecord("Silence Noise Parade", "van", "sat", "17:20", "Bonos on the edge");
-     id = db.insertRecord("Cfit", "main", "fri", "18:20", "The bands named queen. . . . . Were you really surprised");
-     id = db.insertRecord("Decomposing In Paris", "main", "sun", "17:20", "Bonos on the edge");
-     id = db.insertRecord("The Hardchargers", "van", "fri", "19:20", "Swedish and bad");
-     id = db.insertRecord("We Raised Bears", "main", "fri", "18:20", "The bands named queen. . . . . Were you really surprised");
-     id = db.insertRecord("Let\'s Set Sail", "main", "sun", "17:20", "Bonos on the edge");
-     id = db.insertRecord("The Wood Burning Savages", "van", "sat", "19:20", "Swedish and bad");
+    long id = db.insertRecord("Delorentos", "main", "fri", "10:20", "http://www.delorentos.net/");
+    id = db.insertRecord("Goldie Looking Chain", "main", "sat", "12:20", "http://youknowsit.co.uk/");
+    id = db.insertRecord("Jinx Lennon", "van", "sat", "13:20", "http://jinxlennon.com/");
+    id = db.insertRecord("R.S.A.G.", "van", "sat", "14:20", "https://www.facebook.com/RarelySeenAboveGround");
+    id = db.insertRecord("King Kong Company", "main", "sat", "15:20", "https://www.facebook.com/KingKongCompany");
+    id = db.insertRecord("Rackhouse Pilfer", "main", "sun", "16:20", "https://www.facebook.com/Rackhousepilfer");
+    id = db.insertRecord("The Flaws", "van", "sat", "17:20", "https://www.facebook.com/theflaws");
+    id = db.insertRecord("Cry Monster Cry", "main", "fri", "18:20", "http://crymonstercry.com/");
+    id = db.insertRecord("Bunoscionn", "main", "sat", "17:20", "https://www.facebook.com/pages/Bunoscionn/105373108192");
+    id = db.insertRecord("The Crayon Set", "van", "sun", "19:20", "https://www.facebook.com/thecrayonset");
+    id = db.insertRecord("New Secret Weapon", "main", "sun", "10:20", "https://www.facebook.com/newsecretweaponofficial");
+     id = db.insertRecord("Eoin Dillon", "main", "sat", "12:20", "https://myspace.com/eoindillon");
+     id = db.insertRecord("I\'m Your Vinyl", "van", "sun", "13:20", "http://www.imyourvinyl.com/");
+     id = db.insertRecord("Tecimerico", "van", "sat", "14:20", "http://tecimerico.jimdo.com/");
+     id = db.insertRecord("Corner Boy", "main", "sat", "15:20", "https://www.facebook.com/cornerboymusic");
+     id = db.insertRecord("Black Svan", "main", "fri", "16:20", "http://blacksvan.com/");
+     id = db.insertRecord("Fierce Mild", "van", "sat", "17:20", "https://www.facebook.com/pages/Fierce-Mild/680611058665184");
+     id = db.insertRecord("Rudy Trixx", "main", "sun", "18:20", "https://www.facebook.com/Rudytrixx");
+     id = db.insertRecord("The Bonny Men", "main", "sun", "17:20", "http://www.thebonnymen.ie/");
+     id = db.insertRecord("The Bionic Rats", "van", "sun", "19:20", "https://www.facebook.com/thebionicratspage");
+     id = db.insertRecord("Plutonic Dust", "main", "fri", "10:20", "https://www.facebook.com/pages/Plutonic-Dust/171976276242979");
+     id = db.insertRecord("Temper-Mental Misselayneous", "main", "sat", "12:20", "https://www.facebook.com/Tempermentallyill");
+     id = db.insertRecord("Tell No Foxx", "van", "sat", "13:20", "https://www.facebook.com/TELLNOFOXXMUSIC");
+     id = db.insertRecord("Elephant", "van", "sat", "14:20", "http://weareelephants.com/");
+     id = db.insertRecord("Grouse", "main", "sat", "15:20", "https://www.facebook.com/grousesf");
+     id = db.insertRecord("The Blood Red Mountain Band", "main", "sun", "16:20", "https://www.facebook.com/thebloodredmountainband");
+     id = db.insertRecord("Silence Noise Parade", "van", "sat", "17:20", "https://www.facebook.com/silentnoiseparade");
+     id = db.insertRecord("Cfit", "main", "fri", "18:20", "https://cfit.bandcamp.com/");
+     id = db.insertRecord("Decomposing In Paris", "main", "sun", "17:20", "http://www.decomposinginparis.com/");
+     id = db.insertRecord("The Hardchargers", "van", "fri", "19:20", "https://www.facebook.com/The.HardChargers");
+     id = db.insertRecord("We Raised Bears", "main", "fri", "18:20", "https://www.facebook.com/weraisebears");
+     id = db.insertRecord("Let\'s Set Sail", "main", "sun", "17:20", "http://letssetsail.eu/");
+     id = db.insertRecord("The Wood Burning Savages", "van", "sat", "19:20", "https://www.facebook.com/TheWoodBurningSavages");
 
  }
 

@@ -5,17 +5,14 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.mycompany.vantastival.frag.BandsAtoz;
-import com.mycompany.vantastival.frag.BandsYourbands;
-import com.mycompany.vantastival.info.InfoCampingBell;
-import com.mycompany.vantastival.info.InfoCampingCaravans;
-import com.mycompany.vantastival.info.InfoCampingGeneral;
-import com.mycompany.vantastival.info.InfoCampingYurts;
+import com.mycompany.vantastival.frag.BandsAtoj;
+import com.mycompany.vantastival.frag.BandsKtos;
+import com.mycompany.vantastival.frag.BandsTtoz;
 
 
 public class BandsFragmentPagerAdapter extends FragmentPagerAdapter {
 
-    private String[] bandsTitles = new String[] {"A to Z", "Your Bands"};
+    private String[] bandsTitles = new String[] {"A - J", "K - S", "T - Z"};
     private Context context;
 
 
@@ -26,7 +23,7 @@ public class BandsFragmentPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 2;
+        return 3;
     }
 
 
@@ -34,9 +31,11 @@ public class BandsFragmentPagerAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
 
         if(position == 0){
-            return new BandsAtoz();
+            return new BandsAtoj();
         }         else if(position == 1) {
-            return new BandsYourbands();
+            return new BandsKtos();
+        } else if(position == 2) {
+            return new BandsTtoz();
         }
 
 

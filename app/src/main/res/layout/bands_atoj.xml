@@ -7,7 +7,13 @@
     tools:context="com.mycompany.vantastival.Test$PlaceholderFragment"
     android:background="@drawable/repeat">
 
-    <TextView android:id="@+id/section_label" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" android:text="A to Z"/>
+    <ListView
+        android:background="@drawable/repeat"
+        android:layout_marginTop="20dp"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/listViewBands0"
+        android:layout_gravity="center_vertical|center_horizontal"
+        />
 
 </LinearLayout>
