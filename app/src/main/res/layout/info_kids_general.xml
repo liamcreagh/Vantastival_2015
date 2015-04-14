@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.mycompany.vantastival.Test$PlaceholderFragment"
+    android:orientation="vertical"
+    android:background="@drawable/repeat">
+
+    <TextView android:id="@+id/section_label" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="This years kids’ activities include:
+"
+        android:paddingLeft="10dp"/>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+        <TextView
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="
+\n1)   This years kids’ activities include:
+\n2)   Arts and Crafts
+\n3)   Drumming Circle
+\n4)   Street art workshops (spray painting)
+\n5)   Face painting
+\n6)   Soccer skills
+\n7)   Music and songwriting workshops (kids should bring instruments if they have them!)
+\n8)   Puppet shows
+\n9)   Kids’ yoga and movement (please bring your own yoga mat!)
+\n10)  Giant drum
+\n11)  Upcycling furniture
+\n12)  Circus skills
+\n13)  Kids’ disco
+\n14)  Games
+\n15)  Dance workshops
+\n16)  Storytelling
+\n17)  Bouncy castles
+\n\nand much more!
+
+\n\nPlease note: the children’s area is not a crèche and children should not be left unsupervised. Parents must stay with their children at all times.
+
+\n\nChildren under 3 have free entry to Vantastival.  3-13 year olds cost €5 (for a day or weekend ticket).  Tickets for children cannot be purchased in advance and must be paid for at the box office."
+            android:id="@+id/textView" />
+    </ScrollView>
+
+</LinearLayout>

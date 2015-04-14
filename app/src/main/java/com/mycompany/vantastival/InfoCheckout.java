@@ -2,15 +2,13 @@ package com.mycompany.vantastival;
 
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.mycompany.vantastival.stab.CheckoutFragmentPagerAdapter;
-import com.mycompany.vantastival.stab.MainstageFragmentPagerAdapter;
+import com.mycompany.vantastival.stab.KidsFragmentPagerAdapter;
 import com.mycompany.vantastival.stab.SlidingTabLayout;
 
 
@@ -21,14 +19,14 @@ public class InfoCheckout extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_info_checkout);
+        setContentView(R.layout.activity_info_kids);
 
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
 
         actionBar.setBackgroundDrawable(new ColorDrawable(0xff2196F3));
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.checkoutViewPager);
-        viewPager.setAdapter(new CheckoutFragmentPagerAdapter(getSupportFragmentManager(), InfoCheckout.this));
+        viewPager.setAdapter(new KidsFragmentPagerAdapter(getSupportFragmentManager(), InfoCheckout.this));
         SlidingTabLayout slidingTabLayout = (SlidingTabLayout) findViewById(R.id.checkoutTabs);
         slidingTabLayout.setViewPager(viewPager);
 

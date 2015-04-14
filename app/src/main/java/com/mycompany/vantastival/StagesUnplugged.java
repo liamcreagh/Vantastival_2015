@@ -3,7 +3,6 @@ package com.mycompany.vantastival;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.drawable.ColorDrawable;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -12,7 +11,6 @@ import android.view.MenuItem;
 import android.widget.SimpleCursorAdapter;
 
 import com.mycompany.vantastival.db.DBAdapter;
-import com.mycompany.vantastival.stab.MainstageFragmentPagerAdapter;
 import com.mycompany.vantastival.stab.SlidingTabLayout;
 import com.mycompany.vantastival.stab.UnpluggedFragmentPagerAdapter;
 
@@ -122,5 +120,9 @@ public class StagesUnplugged extends ActionBarActivity {
     }
 
 
-
+    /**
+     * Created by liamcreagh on 14/04/2015.
+     */
+    public static class MusicPlayerThread {
+    }
 }

@@ -1,41 +1,40 @@
 package com.mycompany.vantastival;
 
-import android.app.ListActivity;
+import android.annotation.TargetApi;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.media.MediaPlayer;
-import android.os.Environment;
+import android.os.Build;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SeekBar;
-import android.widget.Toast;
-
-import java.util.logging.Handler;
+import android.widget.TextView;
 
 
 public class MusicMain extends ActionBarActivity implements AdapterView.OnItemClickListener{
 
 
 
-    int[] tracks = new int[8];
+    int[] tracks = new int[12];
     ListView listViewMP;
     int currentTrack = 0;
+    int songTime;
 
     String items;
-    String[] nameArtist = {"Fight Fire with Fire By Metallica", "Ride the Lightning by Metallica", "For whom the bell tolls by Metallica", "Fade to Black By Metallica", "Escape by Metallica", "Trapped Under Ice by Metallica", "Creeping Death By Metallica", "Call of Ktulu by Metallica"};
+    String[] nameArtist = {"Call Me (Blondie Cover) - Kingdom of Crows", "Red Moon Bayonets - Bayonets", "Get Better(remix) - Swedish Railway Orchestra", "Closing Time - Graham Sweeney", "Dig Up - After The Ibis", "All I Want - We Were Giants", "More Than You Can Chew - Featuring X", "Danny Thompson Carry on - The Well Dressed Hobos", "Not Everyone That Wanders Is Lost(live) - Majestic-Bears", "Cooleys - Na Tonnta", "Don't Stand So Close - Beached Whales", "Whole Lotta Foxy Lady (live) - Evil Presidentes"};
     MediaPlayer mediaPlayer = null;
     int currentPost = 0;
 
-    SeekBar seekBar;
+    TextView nowPlaying;
+    Button playPause;
 
 
 
@@ -45,6 +44,8 @@ public class MusicMain extends ActionBarActivity implements AdapterView.OnItemCl
         setContentView(R.layout.activity_music_main);
 
         findSongs();
+        nowPlaying =(TextView) findViewById(R.id.nowPlaying);
+        playPause = (Button) findViewById(R.id.buttonPlayPause);
 
         /*
         for(int i = 0; i < mySongs.length; i++){
@@ -52,20 +53,21 @@ public class MusicMain extends ActionBarActivity implements AdapterView.OnItemCl
         }
         */
 
+
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
 
         actionBar.setBackgroundDrawable(new ColorDrawable(0xff2196F3));
 
 
         listViewMP = (ListView) findViewById(R.id.listViewMusicPlayer);
-        listViewMP.setSelector(R.drawable.listselector);
+
         ArrayAdapter<String> adaptedArray = new ArrayAdapter<String>(this, R.layout.listview_music, R.id.textViewSong,  nameArtist);
         listViewMP.setAdapter(adaptedArray);
 
         // error shows - implement "AdapterView.OnItemClickListener" interface
         listViewMP.setOnItemClickListener(this);
 
-        seekBar = (SeekBar) findViewById(R.id.seekBar);
+
 
 
 
@@ -83,18 +85,29 @@ public class MusicMain extends ActionBarActivity implements AdapterView.OnItemCl
         // MediaPlayer song3 = MediaPlayer.create(this, R.raw.bells);
 
 
-        tracks[0] = R.raw.fire;
-        tracks[1] = R.raw.lightning;
-        tracks[2] = R.raw.bells;
-        tracks[3] = R.raw.fade;
-        tracks[4] = R.raw.escape;
-        tracks[5] = R.raw.trapped;
-        tracks[6] = R.raw.creeping;
-        tracks[7] = R.raw.ktulu;
+        tracks[0] = R.raw.koc;
+        tracks[1] = R.raw.bayonets;
+        tracks[2] = R.raw.swedish;
+        tracks[3] = R.raw.sweeney;
+        tracks[4] = R.raw.ibis;
+        tracks[5] = R.raw.giants;
+        tracks[6] = R.raw.featuring;
+        tracks[7] = R.raw.hobos;
+        tracks[8] = R.raw.bears;
+        tracks[9] = R.raw.tonnta;
+        tracks[10] = R.raw.whales;
+        tracks[11] = R.raw.evil;
 
 
 
         mediaPlayer = MediaPlayer.create(this, tracks[currentTrack]);
+        mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            public void onCompletion(MediaPlayer mp) {
+
+                getNextSong();
+
+            }
+        });
 
 
 
@@ -108,27 +121,6 @@ public class MusicMain extends ActionBarActivity implements AdapterView.OnItemCl
 
 
 
-
-/*
-    public void playPauseMusic(int i) {
-
-
-
-        if(mediaPlayer.isPlaying()){
-           // mySongs.selectTrack(i);
-            mediaPlayer.pause();
-
-            // imgButton.setImageResource(R.drawable.pause);
-        } else {
-            mediaPlayer = MediaPlayer.create(this, tracks[i]);
-            // mySongs.selectTrack(i);
-            mediaPlayer.start();
-            // imgButton.setImageResource(R.drawable.play);
-        }
-
-    }
-
-    */
 
 
 
@@ -160,17 +152,41 @@ public class MusicMain extends ActionBarActivity implements AdapterView.OnItemCl
             return true;
         }
 
+
+
+
         return super.onOptionsItemSelected(item);
+
+
+
+
+
     }
 
+
+
+
+    @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
+
+
+
         currentPost = position;
+
 
         mediaPlayer.reset();
         mediaPlayer = MediaPlayer.create(this, tracks[position]);
         mediaPlayer.start();
+        nowPlaying.setText("Now Playing:\n" + nameArtist[currentPost]);
+        mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            public void onCompletion(MediaPlayer mp) {
+
+                getNextSong();
+
+            }
+        });
 
 
     }
@@ -180,11 +196,24 @@ public class MusicMain extends ActionBarActivity implements AdapterView.OnItemCl
 
         if(mediaPlayer.isPlaying()){
             mediaPlayer.pause();
+            playPause.setText("Play");
         } else {
-          //   mediaPlayer.reset();
-         //    mediaPlayer = MediaPlayer.create(this, tracks[currentPost]);
+        /*    mediaPlayer.reset();
+            mediaPlayer = MediaPlayer.create(this, tracks[currentPost]);
             mediaPlayer.start();
-        };
+            */
+            mediaPlayer.start();
+            nowPlaying.setText("Now Playing:\n" + nameArtist[currentPost]);
+            playPause.setText("Pause");
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+
+                    getNextSong();
+
+                }
+            });
+
+        }
 
 
     }
@@ -197,21 +226,60 @@ public class MusicMain extends ActionBarActivity implements AdapterView.OnItemCl
 
         mediaPlayer.reset();
         mediaPlayer = MediaPlayer.create(this, tracks[currentPost]);
-        mediaPlayer.start();};
+        mediaPlayer.start();
+        nowPlaying.setText("Now Playing:\n" + nameArtist[currentPost]);
+        mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            public void onCompletion(MediaPlayer mp) {
+
+                getNextSong();
+
+            }
+        });
+
+
+        }
 
 
 
-    public void onForward(View view){
-        if(!(currentPost == 7)){currentPost++;}
+
+
+
+
+
+
+
+
+    public void onForward(View view) throws InterruptedException {
+        if(!(currentPost == 11)){currentPost++;}
 
         mediaPlayer.reset();
+
         mediaPlayer = MediaPlayer.create(this, tracks[currentPost]);
+       // songTime = mediaPlayer.getDuration();
         mediaPlayer.start();
+        nowPlaying.setText("Now Playing:" + nameArtist[currentPost]);
+        //wait(songTime);
+
+        mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            public void onCompletion(MediaPlayer mp) {
+
+                getNextSong();
+
+            }
+        });
 
 
     }
 
 
+
+public void getNextSong(){
+    if(!(currentPost == 11)){currentPost++;}
+        mediaPlayer.reset();
+        mediaPlayer = MediaPlayer.create(this, tracks[currentPost]);
+        mediaPlayer.start();
+    nowPlaying.setText("Now Playing:\n" + nameArtist[currentPost]);
+}
 
 
 
@@ -219,13 +287,14 @@ public class MusicMain extends ActionBarActivity implements AdapterView.OnItemCl
     @Override
     public void onPause() {
         super.onPause();
-        mediaPlayer.pause();
+
     }
 
     @Override
     public void onStop() {
         super.onStop();
         mediaPlayer.stop();
+
     }
 
 

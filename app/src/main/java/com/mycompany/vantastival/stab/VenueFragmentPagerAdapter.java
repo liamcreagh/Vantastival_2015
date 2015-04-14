@@ -5,17 +5,17 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import com.mycompany.vantastival.info.InfoVenueCookoff;
 import com.mycompany.vantastival.info.InfoVenueDirections;
 import com.mycompany.vantastival.info.InfoVenueGeneral;
-import com.mycompany.vantastival.info.InfoVenueMap;
-import com.mycompany.vantastival.stages.StagesMainstageFriday;
-import com.mycompany.vantastival.stages.StagesMainstageSaturday;
-import com.mycompany.vantastival.stages.StagesMainstageSunday;
+import com.mycompany.vantastival.info.InfoVenueGrotto;
+import com.mycompany.vantastival.info.InfoVenueMelomania;
+import com.mycompany.vantastival.info.InfoVenueVantastibar;
 
 
 public class VenueFragmentPagerAdapter extends FragmentPagerAdapter {
 
-    private String[] venueTitles = new String[] {"About", "Directions", "Map"};
+    private String[] venueTitles = new String[] {"About", "Directions", "Vantastibar", "Cook-off", "Melomania Stage", "Grotto Stage"};
     private Context context;
 
 
@@ -26,7 +26,7 @@ public class VenueFragmentPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 3;
+        return 6;
     }
 
 
@@ -38,8 +38,16 @@ public class VenueFragmentPagerAdapter extends FragmentPagerAdapter {
         } else if(position == 1) {
             return new InfoVenueDirections();
         } else if(position == 2) {
-            return new InfoVenueMap();
+            return new InfoVenueVantastibar();
+        } else if(position == 3) {
+            return new InfoVenueCookoff();
+        } else if(position == 4) {
+            return new InfoVenueGrotto();
+        }else if(position == 5) {
+            return new InfoVenueMelomania();
         }
+
+
 
 
         return null;

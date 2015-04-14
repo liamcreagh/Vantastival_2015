@@ -4,21 +4,19 @@
     tools:context="com.mycompany.vantastival.MusicMain"
     android:orientation="vertical">
 
-    <com.mycompany.vantastival.VScroll android:layout_height="fill_parent"
-        android:layout_width="fill_parent" android:id="@+id/vScroll">
-        <com.mycompany.vantastival.HScroll android:id="@+id/hScroll"
-            android:layout_width="fill_parent" android:layout_height="fill_parent">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/imageView"
-                android:scaleType="matrix"
-                android:src="@drawable/tempmap"/>
 
 
-        </com.mycompany.vantastival.HScroll>
-    </com.mycompany.vantastival.VScroll>
+
+
+
+
+
+    <ImageView android:id="@+id/imageView"
+        android:layout_width="1700dp"
+        android:layout_height="700dp"
+        android:src="@drawable/tempmap"
+        android:scaleType="fitXY" >
+    </ImageView>
 
     </LinearLayout>
 
