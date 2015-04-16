@@ -5,18 +5,26 @@
     android:orientation="vertical">
 
 
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/horizontalScrollView" >
 
-
-
-
-
+        <com.mycompany.vantastival.ZoomView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
     <ImageView android:id="@+id/imageView"
-        android:layout_width="1700dp"
-        android:layout_height="700dp"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
         android:src="@drawable/tempmap"
-        android:scaleType="fitXY" >
-    </ImageView>
+        android:adjustViewBounds="true"/>
+
+        </com.mycompany.vantastival.ZoomView>
+
+        </HorizontalScrollView>
+         >
+
 
     </LinearLayout>
 

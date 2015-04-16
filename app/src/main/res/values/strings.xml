@@ -31,5 +31,7 @@
     <string name="title_activity_touch">Touch</string>
     <string name="title_activity_assignment_tracker">AssignmentTracker</string>
     <string name="title_activity_addassignment">addassignment</string>
+    <string name="title_activity_directions">Map</string>
+    <string name="title_activity_splash_screen">SplashScreen</string>
 
 </resources>

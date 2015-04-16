@@ -1,5 +1,6 @@
 package com.mycompany.vantastival;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
@@ -29,7 +30,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 
-public class MainActivity extends ActionBarActivity implements AdapterView.OnItemClickListener {
+public class MainActivity extends Activity implements AdapterView.OnItemClickListener {
 
     ListView mainMenu;
 
@@ -37,7 +38,7 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
     public static String PACKAGE_NAME;
 
     // Data source in a string based array
-    String[] menuItems = {"Stages", "Bands", "Info", "Map", "Music"};
+    String[] menuItems = {"Stages", "Bands", "Info", "Map", "Music", "Directions"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -152,56 +153,6 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
 
 
 
-
-
-        //---get all Records---
-/*
-        db.open();
-        Cursor c = db.getAllRecords();
-        if (c.moveToFirst())
-        {
-            do {
-                DisplayRecord(c);
-            } while (c.moveToNext());
-        }
-        db.close();
-
-*/
-
-
-        /*
-        //---get a Record---
-        db.open();
-        Cursor c = db.getRecord(2);
-        if (c.moveToFirst())
-            DisplayRecord(c);
-        else
-            Toast.makeText(this, "No Assignments found", Toast.LENGTH_LONG).show();
-        db.close();
-        */
-
-
-        //---update Record---
-        /*
-        db.open();
-        if (db.updateRecord(1, "Hello Android", "2/19/2012", "DPR 224", "First Android Project"))
-            Toast.makeText(this, "Update successful.", Toast.LENGTH_LONG).show();
-        else
-            Toast.makeText(this, "Update failed.", Toast.LENGTH_LONG).show();
-        db.close();
-        */
-
-        /*
-        //---delete a Record---
-        db.open();
-        if (db.deleteRecord(1))
-            Toast.makeText(this, "Delete successful.", Toast.LENGTH_LONG).show();
-        else
-            Toast.makeText(this, "Delete failed.", Toast.LENGTH_LONG).show();
-        db.close();
-        */
-
-
         class DBAdapter extends BaseAdapter {
             private LayoutInflater mInflater;
 
@@ -291,6 +242,9 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
                 break;
             case 4:
                 menuClicked = new Intent(this, MusicMain.class);
+                break;
+            case 5:
+                menuClicked = new Intent(this, DirectionsActivity.class);
                 break;
         } // end of switch
         startActivity(menuClicked);

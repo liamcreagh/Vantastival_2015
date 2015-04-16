@@ -193,4 +193,7 @@ Cursor c = db.getRecordStage("main");
 
     }
 
+    public void disableClickable(View view) {
+
+    }
 }
