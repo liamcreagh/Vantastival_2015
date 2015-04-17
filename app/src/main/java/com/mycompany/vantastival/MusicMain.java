@@ -175,7 +175,7 @@ public class MusicMain extends ActionBarActivity implements AdapterView.OnItemCl
 
         currentPost = position;
 
-
+        playPause.setText("Pause");
         mediaPlayer.reset();
         mediaPlayer = MediaPlayer.create(this, tracks[position]);
         mediaPlayer.start();
@@ -257,7 +257,7 @@ public class MusicMain extends ActionBarActivity implements AdapterView.OnItemCl
         mediaPlayer = MediaPlayer.create(this, tracks[currentPost]);
        // songTime = mediaPlayer.getDuration();
         mediaPlayer.start();
-        nowPlaying.setText("Now Playing:" + nameArtist[currentPost]);
+        nowPlaying.setText("Now Playing:\n" + nameArtist[currentPost]);
         //wait(songTime);
 
         mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {

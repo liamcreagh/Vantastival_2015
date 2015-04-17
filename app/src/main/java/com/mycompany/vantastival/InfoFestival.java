@@ -2,16 +2,16 @@ package com.mycompany.vantastival;
 
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
-import android.support.v4.app.FragmentActivity;
+
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.mycompany.vantastival.stab.FestivalFragmentPagerAdapter;
-import com.mycompany.vantastival.stab.MainstageFragmentPagerAdapter;
-import com.mycompany.vantastival.stab.SlidingTabLayout;
+import com.mycompany.vantastival.tabs.FestivalFragmentPagerAdapter;
+
+import com.mycompany.vantastival.tabs.SlidingTabLayout;
 
 
 public class InfoFestival extends ActionBarActivity {

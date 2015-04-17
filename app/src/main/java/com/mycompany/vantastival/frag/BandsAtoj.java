@@ -12,7 +12,7 @@ import android.widget.SimpleCursorAdapter;
 
 import com.mycompany.vantastival.BandMain;
 import com.mycompany.vantastival.R;
-import com.mycompany.vantastival.StagesMainstage;
+
 
 public class BandsAtoj extends Fragment {
 

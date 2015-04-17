@@ -2,25 +2,12 @@
 <resources>
 
 
-    <!-- Material Design for Android V21 + -->
+
 <style name="AppBasedTheme" parent="android:Theme.Material.Light.DarkActionBar">
-
-
-    <!--
-    <item name="android:colorPrimary">#2196F3</item>
-    <item name="android:colorPrimaryDark">#000</item>
-    <item name="android:textColorPrimary">#E3F2FD</item>-->
-
-    <item name="android:actionBarStyle">@style/MyActionBar</item>
-
 
 
 </style>
 
 
-    <!-- ActionBar styles -->
-    <style name="MyActionBar" >
-        <item name="android:background">#2196F3</item>
-    </style>
 
 </resources>

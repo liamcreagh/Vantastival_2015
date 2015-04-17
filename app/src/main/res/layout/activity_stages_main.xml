@@ -23,21 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20px">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Main Stage"
-        android:id="@+id/buttonMainstage"
-        android:onClick="getMainStage"
-        android:layout_gravity="center_vertical|center_horizontal"
-        android:background="@color/transwhite"
-        android:textSize="30dp"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:layout_margin="5dp"
-        android:textAllCaps="false"/>
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -56,9 +42,9 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Musicmaker"
-        android:id="@+id/buttonMusicMaker"
-        android:onClick="getMusicmakerStage"
+        android:text="Cricketers' Balls"
+        android:id="@+id/button"
+        android:onClick="getBallStage"
         android:layout_gravity="center_vertical|center_horizontal"
         android:background="@color/transwhite"
         android:textSize="30dp"
@@ -71,9 +57,9 @@
     <Button
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="Unplugged"
-    android:id="@+id/buttonUnplugged"
-    android:onClick="getUnpluggedStage"
+    android:text="GoldenPlec Grotto"
+    android:id="@+id/buttonGold"
+    android:onClick="getGoldStage"
         android:layout_gravity="center_vertical|center_horizontal"
         android:background="@color/transwhite"
         android:textSize="30dp"
@@ -84,21 +70,7 @@
         android:layout_margin="5dp"
         android:textAllCaps="false"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Melomania"
-        android:id="@+id/buttonMelomania"
-        android:onClick="getMelomaniaStage"
-        android:layout_gravity="center_vertical|center_horizontal"
-        android:background="@color/transwhite"
-        android:textSize="30dp"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:layout_margin="5dp"
-        android:textAllCaps="false"/>
+
 
     </LinearLayout>
 

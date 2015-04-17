@@ -6,7 +6,7 @@ android:background="@color/lightestblue"
     android:orientation="vertical">
 
     <!-- The sliding tab -->
-    <com.mycompany.vantastival.stab.SlidingTabLayout
+    <com.mycompany.vantastival.tabs.SlidingTabLayout
 
         android:id="@+id/campingTabs"
         android:layout_width="match_parent"

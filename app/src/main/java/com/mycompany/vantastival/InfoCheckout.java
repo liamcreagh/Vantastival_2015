@@ -8,8 +8,8 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.mycompany.vantastival.stab.KidsFragmentPagerAdapter;
-import com.mycompany.vantastival.stab.SlidingTabLayout;
+import com.mycompany.vantastival.tabs.KidsFragmentPagerAdapter;
+import com.mycompany.vantastival.tabs.SlidingTabLayout;
 
 
 public class InfoCheckout extends ActionBarActivity {

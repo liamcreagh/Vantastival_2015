@@ -2,15 +2,17 @@ package com.mycompany.vantastival;
 
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
-import android.support.v4.app.FragmentActivity;
+
+import android.net.Uri;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import com.mycompany.vantastival.stab.MainstageFragmentPagerAdapter;
-import com.mycompany.vantastival.stab.SlidingTabLayout;
-import com.mycompany.vantastival.stab.TicketsFragmentPagerAdapter;
+import android.view.View;
+
+import com.mycompany.vantastival.tabs.SlidingTabLayout;
+import com.mycompany.vantastival.tabs.TicketsFragmentPagerAdapter;
 
 
 public class InfoTickets extends ActionBarActivity {
@@ -33,6 +35,13 @@ public class InfoTickets extends ActionBarActivity {
 
     }
 
+
+
+    public void getBuyTickets(View view){
+        Uri uri = Uri.parse("http://www.vantastival.com/tickets/");
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
+    }
 
 
 

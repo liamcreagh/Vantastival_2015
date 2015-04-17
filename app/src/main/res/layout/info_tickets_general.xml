@@ -12,6 +12,17 @@
         android:layout_height="wrap_content" android:text="About"
         android:paddingLeft="10dp"/>
 
+    <Button
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buy Tickets"
+        android:padding="5dp"
+        android:layout_margin="10dp"
+        android:id="@+id/button2"
+        android:onClick="getBuyTickets"
+        android:background="@color/transwhite"/>
+
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent" >

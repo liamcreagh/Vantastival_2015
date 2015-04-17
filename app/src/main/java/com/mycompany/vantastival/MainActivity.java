@@ -2,11 +2,11 @@ package com.mycompany.vantastival;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.database.Cursor;
+
 import android.net.Uri;
-import android.support.v7.app.ActionBarActivity;
+
 import android.os.Bundle;
-import android.util.Log;
+
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -17,28 +17,18 @@ import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 
-import android.widget.Toast;
-
 // import com.mycompany.vantastival.db.AssignmentTracker;
-import com.mycompany.vantastival.db.DBAdapter;
-
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
 
 
 public class MainActivity extends Activity implements AdapterView.OnItemClickListener {
 
     ListView mainMenu;
 
-    DBAdapter db = new DBAdapter(this);
-    public static String PACKAGE_NAME;
+
+
 
     // Data source in a string based array
-    String[] menuItems = {"Stages", "Bands", "Info", "Map", "Music", "Directions"};
+    String[] menuItems = {"Stages", "Bands", "Info", "Map", "Music", "Location"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,73 +61,11 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
 
 
 
-        PACKAGE_NAME = getPackageName();
-
-
-        try {
-            String destPath = "/data/data/" + getPackageName() + "/databases/AssignmentDB";
-            File f = new File(destPath);
-            if (!f.exists()) {
-                CopyDB(getBaseContext().getAssets().open("db"),
-                        new FileOutputStream(destPath));
-            }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        db.open();
- if(db.isPopulated()){}
-       else {
 
 
 
 
-    // Param (Band Name, Stage, Day, Time, Description)
-    long id = db.insertRecord("Delorentos", "main", "fri", "10:20", "http://www.delorentos.net/");
-    id = db.insertRecord("Goldie Looking Chain", "main", "sat", "12:20", "http://youknowsit.co.uk/");
-    id = db.insertRecord("Jinx Lennon", "van", "sat", "13:20", "http://jinxlennon.com/");
-    id = db.insertRecord("R.S.A.G.", "van", "sat", "14:20", "https://www.facebook.com/RarelySeenAboveGround");
-    id = db.insertRecord("King Kong Company", "main", "sat", "15:20", "https://www.facebook.com/KingKongCompany");
-    id = db.insertRecord("Rackhouse Pilfer", "main", "sun", "16:20", "https://www.facebook.com/Rackhousepilfer");
-    id = db.insertRecord("The Flaws", "van", "sat", "17:20", "https://www.facebook.com/theflaws");
-    id = db.insertRecord("Cry Monster Cry", "main", "fri", "18:20", "http://crymonstercry.com/");
-    id = db.insertRecord("Bunoscionn", "main", "sat", "17:20", "https://www.facebook.com/pages/Bunoscionn/105373108192");
-    id = db.insertRecord("The Crayon Set", "van", "sun", "19:20", "https://www.facebook.com/thecrayonset");
-    id = db.insertRecord("New Secret Weapon", "main", "sun", "10:20", "https://www.facebook.com/newsecretweaponofficial");
-     id = db.insertRecord("Eoin Dillon", "main", "sat", "12:20", "https://myspace.com/eoindillon");
-     id = db.insertRecord("I\'m Your Vinyl", "van", "sun", "13:20", "http://www.imyourvinyl.com/");
-     id = db.insertRecord("Tecimerico", "van", "sat", "14:20", "http://tecimerico.jimdo.com/");
-     id = db.insertRecord("Corner Boy", "main", "sat", "15:20", "https://www.facebook.com/cornerboymusic");
-     id = db.insertRecord("Black Svan", "main", "fri", "16:20", "http://blacksvan.com/");
-     id = db.insertRecord("Fierce Mild", "van", "sat", "17:20", "https://www.facebook.com/pages/Fierce-Mild/680611058665184");
-     id = db.insertRecord("Rudy Trixx", "main", "sun", "18:20", "https://www.facebook.com/Rudytrixx");
-     id = db.insertRecord("The Bonny Men", "main", "sun", "17:20", "http://www.thebonnymen.ie/");
-     id = db.insertRecord("The Bionic Rats", "van", "sun", "19:20", "https://www.facebook.com/thebionicratspage");
-     id = db.insertRecord("Plutonic Dust", "main", "fri", "10:20", "https://www.facebook.com/pages/Plutonic-Dust/171976276242979");
-     id = db.insertRecord("Temper-Mental Misselayneous", "main", "sat", "12:20", "https://www.facebook.com/Tempermentallyill");
-     id = db.insertRecord("Tell No Foxx", "van", "sat", "13:20", "https://www.facebook.com/TELLNOFOXXMUSIC");
-     id = db.insertRecord("Elephant", "van", "sat", "14:20", "http://weareelephants.com/");
-     id = db.insertRecord("Grouse", "main", "sat", "15:20", "https://www.facebook.com/grousesf");
-     id = db.insertRecord("The Blood Red Mountain Band", "main", "sun", "16:20", "https://www.facebook.com/thebloodredmountainband");
-     id = db.insertRecord("Silence Noise Parade", "van", "sat", "17:20", "https://www.facebook.com/silentnoiseparade");
-     id = db.insertRecord("Cfit", "main", "fri", "18:20", "https://cfit.bandcamp.com/");
-     id = db.insertRecord("Decomposing In Paris", "main", "sun", "17:20", "http://www.decomposinginparis.com/");
-     id = db.insertRecord("The Hardchargers", "van", "fri", "19:20", "https://www.facebook.com/The.HardChargers");
-     id = db.insertRecord("We Raised Bears", "main", "fri", "18:20", "https://www.facebook.com/weraisebears");
-     id = db.insertRecord("Let\'s Set Sail", "main", "sun", "17:20", "http://letssetsail.eu/");
-     id = db.insertRecord("The Wood Burning Savages", "van", "sat", "19:20", "https://www.facebook.com/TheWoodBurningSavages");
 
- }
-
-    db.close();
-
-
-
-        //DBAdapter db = new DBAdapter(this);
-
-
-        //---add an assignment---
 
 
 
@@ -244,7 +172,7 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
                 menuClicked = new Intent(this, MusicMain.class);
                 break;
             case 5:
-                menuClicked = new Intent(this, DirectionsActivity.class);
+                menuClicked = new Intent(this, LocationActivity.class);
                 break;
         } // end of switch
         startActivity(menuClicked);
@@ -255,34 +183,9 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
     //  SGLite Methods
 
 
-    public void CopyDB(InputStream inputStream, OutputStream outputStream)
-            throws IOException {
-        //---copy 1K bytes at a time---
-        byte[] buffer = new byte[1024];
-        int length;
-        while ((length = inputStream.read(buffer)) > 0) {
-            outputStream.write(buffer, 0, length);
-        }
-        inputStream.close();
-        outputStream.close();
-    }
 
-    public void DisplayRecord(Cursor c)
-    {
-        Toast.makeText(this,
-                "id: " + c.getString(0) + "\n" +
-                        "Band Name: " + c.getString(1) + "\n" +
-                        "Stage:  " + c.getString(2),
-                Toast.LENGTH_SHORT).show();
-    }
 
-    public void addAssignment(View view)
-    {
 
-        Intent i = new Intent("com.pinchtapzoom.addassignment");
-        startActivity(i);
-        Log.d("TAG", "Clicked");
-    }
 
 
     public void getFacebook(View view){

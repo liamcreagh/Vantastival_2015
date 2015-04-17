@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Vantastival</string>
-    <string name="hello_world">Hello world!</string>
+
     <string name="action_settings">Settings</string>
     <string name="title_activity_stages_main">Stages and Times</string>
     <string name="title_activity_map_main">Map</string>
@@ -17,12 +17,14 @@
     <string name="news_twitter">Twitter</string>
     <string name="title_activity_info_list">Info</string>
     <string name="title_activity_stage_main">Stages</string>
-    <string name="title_activity_stages_mainstage">Mainstage</string>
+
     <string name="title_activity_stages_vanhalla">Vanhalla</string>
-    <string name="title_activity_stages_musicmaker">Musicmaker</string>
-    <string name="title_activity_stages_unplugged">Unplugged</string>
-    <string name="title_activity_stages_melomania">Melomania</string>
-    <string name="title_activity_info_festival">Festival Info</string>
+    <string name="title_activity_stages_musicmaker">Cricketers\' Balls</string>
+    <string name="title_activity_stages_unplugged">GoldenPlec Grotto</string>
+    <string name="title_activity_stages_mainstage"></string>
+    <string name="title_activity_stages_melomania"></string>
+
+    <string name="title_activity_info_festival">Festival</string>
     <string name="title_activity_info_camping">Camping</string>
     <string name="title_activity_info_checkout">Kids</string>
     <string name="title_activity_info_tickets">Tickets</string>
@@ -31,7 +33,7 @@
     <string name="title_activity_touch">Touch</string>
     <string name="title_activity_assignment_tracker">AssignmentTracker</string>
     <string name="title_activity_addassignment">addassignment</string>
-    <string name="title_activity_directions">Map</string>
+    <string name="title_activity_directions">Location</string>
     <string name="title_activity_splash_screen">SplashScreen</string>
 
 </resources>

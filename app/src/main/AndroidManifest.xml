@@ -92,12 +92,12 @@
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".StagesMusicmaker"
+            android:name=".StagesBall"
             android:label="@string/title_activity_stages_musicmaker"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".StagesUnplugged"
+            android:name=".StagesGold"
             android:label="@string/title_activity_stages_unplugged"
             android:screenOrientation="portrait" >
         </activity>
@@ -136,7 +136,7 @@
             android:label="@string/title_activity_assignment_tracker" >
         </activity>
         <activity
-            android:name=".DirectionsActivity"
+            android:name=".LocationActivity"
             android:label="@string/title_activity_directions" >
         </activity>
 

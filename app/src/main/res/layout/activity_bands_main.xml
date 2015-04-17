@@ -7,7 +7,7 @@
     android:background="@color/lightestblue">
 
     <!-- The sliding tab -->
-    <com.mycompany.vantastival.stab.SlidingTabLayout
+    <com.mycompany.vantastival.tabs.SlidingTabLayout
         android:id="@+id/bandsTabs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />

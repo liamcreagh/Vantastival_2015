@@ -50,61 +50,7 @@ public class AssignmentTracker extends Activity {
 			e.printStackTrace();
 		}
                 
-        //DBAdapter db = new DBAdapter(this); 
 
-        
-        //---add an assignment---
-        /*
-        db.open();        
-        long id = db.insertRecord("Hello World", "2/18/2012", "DPR 224", "First Android Project");        
-        id = db.insertRecord("Workbook Exercises", "3/1/2012", "MAT 100", "Do odd numbers");
-        db.close();
-        */
-        
-        //---get all Records---
-        /*
-        db.open();
-        Cursor c = db.getAllRecords();
-        if (c.moveToFirst())
-        {
-            do {          
-                DisplayRecord(c);
-            } while (c.moveToNext());
-        }
-        db.close();
-        */
-        
-        /*
-        //---get a Record---
-        db.open();
-        Cursor c = db.getRecord(2);
-        if (c.moveToFirst())        
-            DisplayRecord(c);
-        else
-            Toast.makeText(this, "No Assignments found", Toast.LENGTH_LONG).show();
-        db.close();
-        */
-        
-        
-        //---update Record---
-        /*
-        db.open();
-        if (db.updateRecord(1, "Hello Android", "2/19/2012", "DPR 224", "First Android Project"))
-            Toast.makeText(this, "Update successful.", Toast.LENGTH_LONG).show();
-        else
-            Toast.makeText(this, "Update failed.", Toast.LENGTH_LONG).show();        
-        db.close();
-        */
-        
-        /*
-        //---delete a Record---
-        db.open();
-        if (db.deleteRecord(1))
-            Toast.makeText(this, "Delete successful.", Toast.LENGTH_LONG).show();
-        else
-            Toast.makeText(this, "Delete failed.", Toast.LENGTH_LONG).show();            
-        db.close();
-        */
     }
     
     private class DBAdapter extends BaseAdapter {

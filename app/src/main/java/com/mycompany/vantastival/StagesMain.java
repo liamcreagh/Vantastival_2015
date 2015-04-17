@@ -1,22 +1,16 @@
 package com.mycompany.vantastival;
 
-import android.app.ActionBar;
-import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
-import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ListView;
-import android.widget.SimpleCursorAdapter;
 import android.widget.Toast;
 
 import com.mycompany.vantastival.db.DBAdapter;
-import com.mycompany.vantastival.db.Message;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -57,11 +51,6 @@ public class StagesMain extends ActionBarActivity {
 
 
 
-
-
-
-
-
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
 
         actionBar.setBackgroundDrawable(new ColorDrawable(0xff2196F3));
@@ -69,51 +58,26 @@ public class StagesMain extends ActionBarActivity {
   
 
 
-       /*
-
-Cursor c = db.getRecordStage("main");
-        if (c.moveToFirst())
-            DisplayRecord(c);
-        else
-            Toast.makeText(this, "No Assignments found", Toast.LENGTH_LONG).show();
-            */
-
-
-
-
-
-
-
-
-
-
     }
 
 
 
 
-    public void getMainStage(View view) {
-        Intent intent = new Intent(this, StagesMainstage.class);
-        startActivity(intent);
 
-    }
 
     public void getVanhallaStage(View view) {
         Intent intent = new Intent(this, StagesVanhalla.class);
         startActivity(intent);
     }
-    public void getMusicmakerStage(View view) {
-        Intent intent = new Intent(this, StagesMusicmaker.class);
+    public void getBallStage(View view) {
+        Intent intent = new Intent(this, StagesBall.class);
         startActivity(intent);
     }
-    public void getUnpluggedStage(View view) {
-        Intent intent = new Intent(this, StagesUnplugged.class);
+    public void getGoldStage(View view) {
+        Intent intent = new Intent(this, StagesGold.class);
         startActivity(intent);
     }
-    public void getMelomaniaStage(View view) {
-        Intent intent = new Intent(this, StagesMelomania.class);
-        startActivity(intent);
-    }
+
 
 
 
@@ -157,43 +121,11 @@ Cursor c = db.getRecordStage("main");
         outputStream.close();
     }
 
-    public void DisplayRecord(Cursor c)
-    {
-        Toast.makeText(this,
-                "id: " + c.getString(0) + "\n" +
-                        "Band Name: " + c.getString(1) + "\n" +
-                        "Stage:  " + c.getString(2),
-                Toast.LENGTH_SHORT).show();
-    }
 
 
 
-    public void populate(){
-
-       /*
-        db.open();
-
-
-        Cursor cursor = db.getStageDay("main", "sat");
 
 
 
-        // THE DESIRED COLUMNS TO BE BOUND
-        String[] columns = new String[] {DBAdapter.KEY_BANDNAME, DBAdapter.KEY_TIME };
-        // THE XML DEFINED VIEWS WHICH THE DATA WILL BE BOUND TO
-        int[] to = new int[] { R.id.bandNames, R.id.stageTimes};
 
-        // CREATE THE ADAPTER USING THE CURSOR POINTING TO THE DESIRED DATA AS WELL AS THE LAYOUT INFORMATION
-        SimpleCursorAdapter myAdapter = new SimpleCursorAdapter(getBaseContext(), R.layout.listview_item_stages, cursor, columns, to);
-
-        ListView myList = (ListView) findViewById(R.id.listViewMainStage);
-        myList.setAdapter(myAdapter);
-        db.close(); */
-
-
-    }
-
-    public void disableClickable(View view) {
-
-    }
 }

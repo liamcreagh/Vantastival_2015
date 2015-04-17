@@ -16,7 +16,7 @@ public class DBAdapter {
     public static final String KEY_STAGE = "stage";
     public static final String KEY_DAY = "day";
     public static final String KEY_TIME = "time";
-    public static final String KEY_DESCRIPTION = "description";
+    public static final String KEY_SITE = "site";
     private static final String TAG = "DBAdapter";
 
     private static final String DATABASE_NAME = "BandsDB";
@@ -25,7 +25,7 @@ public class DBAdapter {
 
     private static final String DATABASE_CREATE =
         "create table if not exists bands (_id integer primary key autoincrement, "
-        + "bandname VARCHAR not null, stage VARCHAR, day VARCHAR, time time, description VARCHAR );";
+        + "bandname VARCHAR not null, stage VARCHAR, day VARCHAR, time time, site VARCHAR );";
 
     private final Context context;
 
@@ -86,7 +86,7 @@ public class DBAdapter {
         initialValues.put(KEY_STAGE, stage);
         initialValues.put(KEY_DAY, day);
         initialValues.put(KEY_TIME, time);
-        initialValues.put(KEY_DESCRIPTION, description);
+        initialValues.put(KEY_SITE, description);
         return db.insert(DATABASE_TABLE, null, initialValues);
     }
 
@@ -100,7 +100,7 @@ public class DBAdapter {
     public Cursor getAllRecords()
     {
         return db.query(DATABASE_TABLE, new String[] {KEY_ROWID, KEY_BANDNAME,
-                KEY_STAGE, KEY_DAY, KEY_TIME, KEY_DESCRIPTION}, null, null, null, null, null, null);
+                KEY_STAGE, KEY_DAY, KEY_TIME, KEY_SITE}, null, null, null, null, null, null);
 
 
 
@@ -206,7 +206,7 @@ StringBuffer buffer = new StringBuffer();
     {
         Cursor mCursor =
                 db.query(true, DATABASE_TABLE, new String[] {KEY_ROWID,
-                KEY_BANDNAME, KEY_STAGE, KEY_DAY, KEY_TIME, KEY_DESCRIPTION},
+                KEY_BANDNAME, KEY_STAGE, KEY_DAY, KEY_TIME, KEY_SITE},
                 KEY_ROWID + "=" + rowId, null, null, null, null, null);
         if (mCursor != null) {
             mCursor.moveToFirst();
@@ -225,7 +225,7 @@ StringBuffer buffer = new StringBuffer();
         args.put(KEY_STAGE, stage);
         args.put(KEY_STAGE, day);
         args.put(KEY_TIME, time);
-        args.put(KEY_DESCRIPTION, description);
+        args.put(KEY_SITE, description);
         return db.update(DATABASE_TABLE, args, KEY_ROWID + "=" + rowId, null) > 0;
     }
 
@@ -233,7 +233,7 @@ StringBuffer buffer = new StringBuffer();
 
         public boolean isPopulated(){
            Cursor cur =  db.query(DATABASE_TABLE, new String[] {KEY_ROWID, KEY_BANDNAME,
-                   KEY_STAGE, KEY_DAY, KEY_TIME, KEY_DESCRIPTION}, null, null, null, null, null, null);
+                   KEY_STAGE, KEY_DAY, KEY_TIME, KEY_SITE}, null, null, null, null, null, null);
 
             cur.moveToLast();
             int size = cur.getCount();

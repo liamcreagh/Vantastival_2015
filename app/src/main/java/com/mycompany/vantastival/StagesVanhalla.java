@@ -3,7 +3,6 @@ package com.mycompany.vantastival;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.drawable.ColorDrawable;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -13,8 +12,8 @@ import android.widget.SimpleCursorAdapter;
 
 import com.mycompany.vantastival.db.DBAdapter;
 
-import com.mycompany.vantastival.stab.SlidingTabLayout;
-import com.mycompany.vantastival.stab.VanhallaFragmentPagerAdapter;
+import com.mycompany.vantastival.tabs.SlidingTabLayout;
+import com.mycompany.vantastival.tabs.VanhallaFragmentPagerAdapter;
 
 import java.io.File;
 import java.io.FileNotFoundException;

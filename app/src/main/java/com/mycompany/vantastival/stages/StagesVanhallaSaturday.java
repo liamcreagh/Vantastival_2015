@@ -11,7 +11,7 @@ import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 
 import com.mycompany.vantastival.R;
-import com.mycompany.vantastival.StagesMainstage;
+
 import com.mycompany.vantastival.StagesVanhalla;
 
 public class StagesVanhallaSaturday extends Fragment {

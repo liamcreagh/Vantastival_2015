@@ -11,7 +11,7 @@ import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 
 import com.mycompany.vantastival.R;
-import com.mycompany.vantastival.StagesMainstage;
+
 import com.mycompany.vantastival.StagesVanhalla;
 
 public class StagesVanhallaSunday extends Fragment {
@@ -24,6 +24,7 @@ public class StagesVanhallaSunday extends Fragment {
         SimpleCursorAdapter myAdapter = ((StagesVanhalla) getActivity()).populate("van", "sun");
 
         myList.setAdapter(myAdapter);
+
 
 
         return myList;

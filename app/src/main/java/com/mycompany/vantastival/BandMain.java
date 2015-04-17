@@ -15,8 +15,8 @@ import android.widget.SimpleCursorAdapter;
 
 
 import com.mycompany.vantastival.db.DBAdapter;
-import com.mycompany.vantastival.stab.BandsFragmentPagerAdapter;
-import com.mycompany.vantastival.stab.SlidingTabLayout;
+import com.mycompany.vantastival.tabs.BandsFragmentPagerAdapter;
+import com.mycompany.vantastival.tabs.SlidingTabLayout;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -122,7 +122,7 @@ public class BandMain extends ActionBarActivity  {
 
 
 
-       bandSites = new String[] {DBAdapter.KEY_DESCRIPTION};
+       bandSites = new String[] {DBAdapter.KEY_SITE};
         // CREATE THE ADAPTER USING THE CURSOR POINTING TO THE DESIRED DATA AS WELL AS THE LAYOUT INFORMATION
         SimpleCursorAdapter myAdapter = new SimpleCursorAdapter(getBaseContext(), R.layout.listview_item_bands_atoj, cursor, columns, to);
 

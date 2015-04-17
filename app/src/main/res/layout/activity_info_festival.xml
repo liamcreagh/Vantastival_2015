@@ -6,7 +6,7 @@
     android:orientation="vertical">
 
     <!-- The sliding tab -->
-    <com.mycompany.vantastival.stab.SlidingTabLayout
+    <com.mycompany.vantastival.tabs.SlidingTabLayout
         android:id="@+id/festivalTabs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
