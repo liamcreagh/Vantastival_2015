@@ -35,7 +35,7 @@ public class StagesMain extends ActionBarActivity {
         setContentView(R.layout.activity_stages_main);
 
 
-
+        // Gets SQLite DB
         try {
             String destPath = "/data/data/" + getPackageName() + "/databases/AssignmentDB";
             File f = new File(destPath);
@@ -50,9 +50,8 @@ public class StagesMain extends ActionBarActivity {
         }
 
 
-
+        // Programmatically styles Action Bar as Class Extends ActionbarActivity
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
-
         actionBar.setBackgroundDrawable(new ColorDrawable(0xff2196F3));
 
   

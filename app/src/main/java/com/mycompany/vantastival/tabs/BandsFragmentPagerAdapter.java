@@ -9,6 +9,7 @@ import com.mycompany.vantastival.frag.BandsAtoj;
 import com.mycompany.vantastival.frag.BandsKtos;
 import com.mycompany.vantastival.frag.BandsTtoz;
 
+// Creates a Sliding Tab Layout for Bands Activity
 
 public class BandsFragmentPagerAdapter extends FragmentPagerAdapter {
 

@@ -14,6 +14,9 @@ import com.mycompany.vantastival.BandMain;
 import com.mycompany.vantastival.R;
 
 
+// Fragment that calls atoj() method from BandMain Activity and queries DBAdapther (SQLite) for bands beginning with letters A to J
+
+
 public class BandsAtoj extends Fragment {
 
     @Override

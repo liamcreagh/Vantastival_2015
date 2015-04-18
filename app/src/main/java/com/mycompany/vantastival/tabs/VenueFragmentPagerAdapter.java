@@ -13,6 +13,8 @@ import com.mycompany.vantastival.info.InfoVenueMelomania;
 import com.mycompany.vantastival.info.InfoVenueVantastibar;
 
 
+// Creates a Sliding Tab Layout for Venue Section in Info Activity
+
 public class VenueFragmentPagerAdapter extends FragmentPagerAdapter {
 
     private String[] venueTitles = new String[] {"About", "Directions", "Vantastibar", "Cook-off", "Melomania Stage", "Grotto Stage"};

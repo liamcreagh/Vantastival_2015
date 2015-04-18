@@ -10,6 +10,8 @@ import com.mycompany.vantastival.info.InfoTicketsPrices;
 import com.mycompany.vantastival.info.InfoTicketsTerms;
 
 
+// Creates a Sliding Tab Layout for Tickets Section in Info Activity
+
 public class TicketsFragmentPagerAdapter extends FragmentPagerAdapter {
 
     private String[] ticketsTitles = new String[] {"About", "Prices", "Terms & Conditions"};

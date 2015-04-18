@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 
 import com.mycompany.vantastival.R;
 
+// Calls Fragment (Tab in sliding Tabs) in Venue section within InfoMain Activity
+
 public class InfoVenueGeneral extends Fragment {
 
     @Override

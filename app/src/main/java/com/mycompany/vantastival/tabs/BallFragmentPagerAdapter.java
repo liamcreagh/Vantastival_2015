@@ -9,6 +9,7 @@ import com.mycompany.vantastival.stages.StagesBallFriday;
 import com.mycompany.vantastival.stages.StagesBallSaturday;
 import com.mycompany.vantastival.stages.StagesBallSunday;
 
+// Creates a Sliding Tab Layout for Cricketers' Balls Section in Stages Activity
 
 public class BallFragmentPagerAdapter extends FragmentPagerAdapter {
 

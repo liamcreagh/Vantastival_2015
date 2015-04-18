@@ -11,6 +11,8 @@ import com.mycompany.vantastival.info.InfoCampingGeneral;
 import com.mycompany.vantastival.info.InfoCampingYurts;
 
 
+// Creates a Sliding Tab Layout for Camping Section in Info Activity
+
 public class CampingFragmentPagerAdapter extends FragmentPagerAdapter {
 
     private String[] campingTitles = new String[] {"General Camping", "Caravans & Campervans", "Yurts", "Bell Tents"};

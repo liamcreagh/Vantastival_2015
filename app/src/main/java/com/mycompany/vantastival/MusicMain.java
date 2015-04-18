@@ -22,11 +22,11 @@ import android.widget.TextView;
 public class MusicMain extends ActionBarActivity implements AdapterView.OnItemClickListener{
 
 
-
+    // Defines all instance variables used in Music Player
     int[] tracks = new int[12];
     ListView listViewMP;
     int currentTrack = 0;
-    int songTime;
+
 
     String items;
     String[] nameArtist = {"Call Me (Blondie Cover) - Kingdom of Crows", "Red Moon Bayonets - Bayonets", "Get Better(remix) - Swedish Railway Orchestra", "Closing Time - Graham Sweeney", "Dig Up - After The Ibis", "All I Want - We Were Giants", "More Than You Can Chew - Featuring X", "Danny Thompson Carry on - The Well Dressed Hobos", "Not Everyone That Wanders Is Lost(live) - Majestic-Bears", "Cooleys - Na Tonnta", "Don't Stand So Close - Beached Whales", "Whole Lotta Foxy Lady (live) - Evil Presidentes"};
@@ -47,15 +47,10 @@ public class MusicMain extends ActionBarActivity implements AdapterView.OnItemCl
         nowPlaying =(TextView) findViewById(R.id.nowPlaying);
         playPause = (Button) findViewById(R.id.buttonPlayPause);
 
-        /*
-        for(int i = 0; i < mySongs.length; i++){
-            toast(mySongs[1].toString());
-        }
-        */
 
 
+        // Programmatically styles Action Bar as Class Extends ActionbarActivity
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
-
         actionBar.setBackgroundDrawable(new ColorDrawable(0xff2196F3));
 
 
@@ -228,6 +223,7 @@ public class MusicMain extends ActionBarActivity implements AdapterView.OnItemCl
         mediaPlayer = MediaPlayer.create(this, tracks[currentPost]);
         mediaPlayer.start();
         nowPlaying.setText("Now Playing:\n" + nameArtist[currentPost]);
+        playPause.setText("Pause");
         mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             public void onCompletion(MediaPlayer mp) {
 
@@ -259,7 +255,7 @@ public class MusicMain extends ActionBarActivity implements AdapterView.OnItemCl
         mediaPlayer.start();
         nowPlaying.setText("Now Playing:\n" + nameArtist[currentPost]);
         //wait(songTime);
-
+        playPause.setText("Pause");
         mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             public void onCompletion(MediaPlayer mp) {
 

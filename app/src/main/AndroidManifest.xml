@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.mycompany.vantastival" >
+    package="com.mycompany.vantastival" 
+android:versionCode="2" android:versionName="1.0.1"
+    >
+
+
 
     <uses-sdk android:minSdkVersion="11" />
 
@@ -145,7 +149,7 @@
 
       <meta-data
           android:name="com.google.android.maps.v2.API_KEY"
-          android:value="AIzaSyA7sKK3iG8mm_5zklGRJnl3feLLfe2dgcE"
+          android:value="AIzaSyCPX4AfdctJ8fJUn7M8Fsy79Fnz8g7lVds"
           />
 
 

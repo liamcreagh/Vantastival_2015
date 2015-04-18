@@ -9,6 +9,7 @@ import com.mycompany.vantastival.stages.StagesGoldFriday;
 import com.mycompany.vantastival.stages.StagesGoldSaturday;
 import com.mycompany.vantastival.stages.StagesGoldSunday;
 
+// Creates a Sliding Tab Layout for GoldenPlec Grotto Section in Stages Activity
 
 public class GoldFragmentPagerAdapter extends FragmentPagerAdapter {
 

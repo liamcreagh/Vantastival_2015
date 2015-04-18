@@ -14,6 +14,8 @@ import com.mycompany.vantastival.R;
 
 import com.mycompany.vantastival.StagesBall;
 
+// Fragment that calls populate() method from StagesBall Activity and queries DBAdapther (SQLite) for bands playing Cricketers' Balls Stage on Sunday
+
 public class StagesBallSunday extends Fragment {
 
     @Override

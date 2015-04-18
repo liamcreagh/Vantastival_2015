@@ -23,8 +23,8 @@ public class InfoFestival extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info_festival);
 
+        // Programmatically styles Action Bar as Class Extends ActionbarActivity
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
-
         actionBar.setBackgroundDrawable(new ColorDrawable(0xff2196F3));
 
 

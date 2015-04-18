@@ -37,8 +37,8 @@ public class BandMain extends ActionBarActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bands_main);
 
+        // Programmatically styles Action Bar as Class Extends ActionbarActivity
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
-
         actionBar.setBackgroundDrawable(new ColorDrawable(0xff2196F3));
 
 
@@ -48,10 +48,12 @@ public class BandMain extends ActionBarActivity  {
         slidingTabLayout.setViewPager(viewPager);
 
 
-
+        // Stops onDestroy Method being Called
         viewPager.setOffscreenPageLimit(3);
 
 
+
+        // Gets SQLite DB
         try {
             String destPath = "/data/data/" + getPackageName() + "/databases/AssignmentDB";
             File f = new File(destPath);

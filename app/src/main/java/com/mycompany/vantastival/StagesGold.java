@@ -33,8 +33,8 @@ public class StagesGold extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stages_gold);
 
+        // Programmatically styles Action Bar as Class Extends ActionbarActivity
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
-
         actionBar.setBackgroundDrawable(new ColorDrawable(0xff2196F3));
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.unpluggedViewPager);
@@ -42,9 +42,10 @@ public class StagesGold extends ActionBarActivity {
         SlidingTabLayout slidingTabLayout = (SlidingTabLayout) findViewById(R.id.unpluggedTabs);
         slidingTabLayout.setViewPager(viewPager);
 
+        // Stops onDestroy Method being Called
         viewPager.setOffscreenPageLimit(3);
 
-
+        // Gets SQLite DB
         try {
             String destPath = "/data/data/" + getPackageName() + "/databases/AssignmentDB";
             File f = new File(destPath);

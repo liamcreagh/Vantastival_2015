@@ -9,6 +9,7 @@ import com.mycompany.vantastival.stages.StagesVanhallaFriday;
 import com.mycompany.vantastival.stages.StagesVanhallaSaturday;
 import com.mycompany.vantastival.stages.StagesVanhallaSunday;
 
+// Creates a Sliding Tab Layout for Vanhalla Section in Stages Activity
 
 public class VanhallaFragmentPagerAdapter extends FragmentPagerAdapter {
 

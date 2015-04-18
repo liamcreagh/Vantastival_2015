@@ -24,8 +24,8 @@ public class InfoTickets extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info_tickets);
 
+        // Programmatically styles Action Bar as Class Extends ActionbarActivity
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
-
         actionBar.setBackgroundDrawable(new ColorDrawable(0xff2196F3));
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.ticketsViewPager);

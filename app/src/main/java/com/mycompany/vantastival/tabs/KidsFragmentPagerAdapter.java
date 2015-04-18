@@ -10,6 +10,7 @@ import com.mycompany.vantastival.info.InfoKidsGeneral;
 
 import com.mycompany.vantastival.info.InfoKidsMusic;
 
+// Creates a Sliding Tab Layout for Kids Section in Info Activity
 
 public class KidsFragmentPagerAdapter extends FragmentPagerAdapter {
 

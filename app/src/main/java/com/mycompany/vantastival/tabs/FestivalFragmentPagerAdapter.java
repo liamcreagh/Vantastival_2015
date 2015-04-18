@@ -16,6 +16,7 @@ import com.mycompany.vantastival.info.InfoFestivalGreen;
 import com.mycompany.vantastival.info.InfoFestivalOpentimes;
 import com.mycompany.vantastival.info.InfoFestivalTransport;
 
+// Creates a Sliding Tab Layout for Festival Section in Info Activity
 
 public class FestivalFragmentPagerAdapter extends FragmentPagerAdapter {
 
